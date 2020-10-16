@@ -76,7 +76,7 @@ return [
         ],
         'pengguna' => [
             'driver' => 'eloquent',
-            'model' => App\pengguna::class,
+            'model' => App\Pengguna::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

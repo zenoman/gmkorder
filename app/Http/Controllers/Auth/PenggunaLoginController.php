@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers\Auth;
-use App\pengguna;
+use App\Pengguna;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -45,7 +45,7 @@ class PenggunaLoginController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'username'=>'required'
         ]);
-        pengguna::create([
+        Pengguna::create([
             'nama' => $request->nama,
             'email' => $request->email,
             'telp'=>$request->telp,
