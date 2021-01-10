@@ -7,71 +7,73 @@
 @section('content')
 <div class="content-wrapper">
     <div class="content-header">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Admin</h1>
+                <div class="col-sm-12">
+                    <h1 class="m-0 text-dark"> Admin</h1>
                 </div>
             </div>
         </div>
     </div>
-    <section class="content">
-        <div class="row">
-            <div class="col-12">
-                <div class="card card-success">
-                    <div class="card-header">
-                        <h3 class="card-title">Tambah Data</h3>
-                    </div>
-                    <form method="POST" onsubmit="return validasiinput();" role="form" enctype="multipart/form-data"
-                        action="{{url('/admin')}}">
-                        @csrf
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Nama</label>
-                                <input type="text" class="form-control" name="nama" required autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Username</label>
-                                <input type="text" class="form-control" name="username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">No. Telp</label>
-                                <input type="text" class="form-control" name="telp" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Level</label>
-                                <select name="level" class="form-control">
-                                    <option value="Admin">Admin</option>
-                                    <option value="Super Admin">Super Admin</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">Gambar</label>
-                                <input type="file" class="form-control" name="gambar" accept="image/*" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Konfirmasi Password</label>
-                                <input type="password" class="form-control" id="kpassword" required>
-                            </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">Tambah Data</h3>
                         </div>
+                        <form method="POST" onsubmit="return validasiinput();" role="form" enctype="multipart/form-data"
+                            action="{{url('/admin')}}">
+                            @csrf
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nama</label>
+                                    <input type="text" class="form-control" name="nama" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Username</label>
+                                    <input type="text" class="form-control" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">No. Telp</label>
+                                    <input type="text" class="form-control" name="telp" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Level</label>
+                                    <select name="level" class="form-control">
+                                        <option value="Admin">Admin</option>
+                                        <option value="Super Admin">Super Admin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Gambar</label>
+                                    <input type="file" class="form-control" name="gambar" accept="image/*" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Konfirmasi Password</label>
+                                    <input type="password" class="form-control" id="kpassword" required>
+                                </div>
+                            </div>
 
-                        <div class="card-footer">
-                            <button type="reset" onclick="history.go(-1)" class="btn btn-danger">Kembali</button>
-                            <button type="submit" class="btn btn-primary float-right">Simpan</button>
-                        </div>
-                    </form>
+                            <div class="card-footer">
+                                <button type="reset" onclick="history.go(-1)" class="btn btn-danger">Kembali</button>
+                                <button type="submit" class="btn btn-primary float-right">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 @endsection
 

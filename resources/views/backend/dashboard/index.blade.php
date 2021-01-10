@@ -1,30 +1,28 @@
 @extends('layouts/base')
+
 @section('content')
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Dashboard</h1>
+                <div class="col-sm-12">
+                    <h1 class="m-0 text-dark"> Dashboard</h1>
                 </div>
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <section class="content">
-        @if (session('status'))
-        <div class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h4>Info!</h4>
-            {{ session('status') }}
+            </div>
         </div>
-        @endif
-        <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
+    </div>
+    <div class="content">
+        <div class="container">
             <div class="row">
+                @if(session('status'))
+                <div class="col-lg-12">
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4>Info!</h4>
+                        {{ session('status') }}
+                    </div>
+                </div>
+                @endif
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
@@ -86,8 +84,7 @@
                 </div>
                 <!-- ./col -->
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+        </div>
+    </div>
 </div>
 @endsection

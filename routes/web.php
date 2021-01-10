@@ -18,5 +18,5 @@ Route::get('/profil-saya', 'frontend\HomeController@profilsaya')->name('profil-s
 Route::get('/dashboard', 'backend\HomeController@index')->name('dashboard');
 Route::get('/edit-profile', 'backend\HomeController@editprofile')->name('editprofile');
 Route::post('/edit-profile/{id}', 'backend\HomeController@aksieditprofile');
-// Route::get('/data-admin','backend\AdminController@listdata'); with datatable plugin
+Route::get('/data-admin','backend\AdminController@listdata');
 Route::resource('/admin','backend\AdminController');

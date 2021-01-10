@@ -138,6 +138,6 @@ class AdminController extends Controller
             File::delete('img/admin/'.$data->gambar);
         }
         User::destroy($id);
-        return redirect('/admin')->with('status','Sukses menghapus data');
+        // return redirect('/admin')->with('status','Sukses menghapus data');
     }
 }

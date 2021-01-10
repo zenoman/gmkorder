@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Http\Request;
+use Auth;
 class LoginController extends Controller
 {
     /*
@@ -33,7 +34,10 @@ class LoginController extends Controller
      *
      * @return void
      */
-    
+    protected function authenticated(Request $request, $user)
+    {
+       return redirect()->intended($this->redirectPath())->with('status', 'Login Success, Welcome Back '.Auth::user()->level.' '.Auth::user()->name);
+    }
     public function username()
     {
         return 'username';
