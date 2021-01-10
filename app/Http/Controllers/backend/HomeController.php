@@ -82,6 +82,6 @@ class HomeController extends Controller
             }
         }
 
-        return redirect('/dashboard')->with('status','Sukses memperbarui profile');
+        return redirect('backend/dashboard')->with('status','Sukses memperbarui profile');
     }
 }

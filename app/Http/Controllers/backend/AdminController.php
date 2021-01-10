@@ -53,7 +53,7 @@ class AdminController extends Controller
             'password'=>Hash::make($request->password),
         ]);
         
-        return redirect('/admin')->with('status','Sukses menyimpan data');
+        return redirect('backend/admin')->with('status','Sukses menyimpan data');
     }
 
     //=================================================================
@@ -127,7 +127,7 @@ class AdminController extends Controller
             }
         }
 
-        return redirect('/admin')->with('status','Sukses memperbarui data');
+        return redirect('backend/admin')->with('status','Sukses memperbarui data');
     }
 
     //=================================================================

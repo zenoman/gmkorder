@@ -24,7 +24,7 @@
                             <h3 class="card-title">Tambah Data</h3>
                         </div>
                         <form method="POST" onsubmit="return validasiinput();" role="form" enctype="multipart/form-data"
-                            action="{{url('/admin')}}">
+                            action="{{url('backend/admin')}}">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">

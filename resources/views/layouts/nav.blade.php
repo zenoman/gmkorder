@@ -14,10 +14,17 @@
         <div class="collapse navbar-collapse order-3" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="{{url('/dashboard')}}" class="nav-link">Home</a>
+                    <a href="{{url('backend/dashboard')}}" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{url('/admin')}}" class="nav-link">Admin</a>
+                <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        class="nav-link dropdown-toggle">Master Data</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                        <li><a href="{{url('backend/admin')}}" class="dropdown-item">Admin </a></li>
+                        <li><a href="{{url('backend/pengguna')}}" class="dropdown-item">Pengguna</a></li>
+
+                        <li class="dropdown-divider"></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Contact</a>

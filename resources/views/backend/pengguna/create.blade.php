@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0 text-dark"> Admin</h1>
+                    <h1 class="m-0 text-dark"> Pengguna</h1>
                 </div>
             </div>
         </div>
@@ -19,59 +19,51 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="card card-warning">
+                    <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Edit Data</h3>
+                            <h3 class="card-title">Tambah Pengguna</h3>
                         </div>
                         <form method="POST" onsubmit="return validasiinput();" role="form" enctype="multipart/form-data"
-                            action="{{url('backend/admin/'.$data->id)}}">
+                            action="{{url('backend/pengguna')}}">
                             @csrf
-                            <input type="hidden" name="_method" value="PUT">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nama</label>
-                                    <input type="text" class="form-control" name="nama" value="{{$data->name}}" required
-                                        autofocus>
+                                    <input type="text" class="form-control" name="nama"  value="{{ old('nama') }}" required autofocus>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Username</label>
-                                    <input type="text" class="form-control" name="username" value="{{$data->username}}"
-                                        required>
+                                    <input type="text" class="form-control @error('username') is-invalid @enderror"
+                                        name="username"  value="{{ old('username') }}" required>
+                                    @error('username')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control" name="email" value="{{$data->email}}"
-                                        required>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  value="{{ old('email') }}" name="email" required>
+                                    @error('email')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">No. Telp</label>
-                                    <input type="text" class="form-control" name="telp" value="{{$data->telp}}"
-                                        required>
+                                    <input type="text" class="form-control @error('telp') is-invalid @enderror"  value="{{ old('telp') }}" name="telp" required>
+                                    @error('telp')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Level</label>
-                                    <select name="level" class="form-control">
-                                        <option value="Admin" @if($data->level=="Admin") selected @endif>Admin</option>
-                                        <option value="Super Admin" @if($data->level=="Super Admin") selected
-                                            @endif>Super
-                                            Admin</option>
-                                    </select>
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <img src="{{asset('img/admin/'.$data->gambar)}}" alt="">
-                                    <br>
-                                    <label for="exampleInputFile">Gambar Baru*</label>
-                                    <input type="file" class="form-control" name="gambar" accept="image/*">
-                                    <input type="hidden" name="gambar_lama" value="{{$data->gambar}}">
+                                    <label for="exampleInputFile">Gambar</label>
+                                    <input type="file" class="form-control" name="gambar" accept="image/*" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Password Baru*</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <label for="exampleInputEmail1">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Konfirmasi Password Baru*</label>
-                                    <input type="password" class="form-control" id="kpassword">
+                                    <label for="exampleInputEmail1">Konfirmasi Password</label>
+                                    <input type="password" class="form-control" id="kpassword" required>
                                 </div>
                             </div>
 

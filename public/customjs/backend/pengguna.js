@@ -4,20 +4,20 @@ $(function () {
         processing: true,
         serverSide: true,
         order: [[0, "desc"]],
-        ajax: '/backend/data-admin',
+        ajax: '/backend/data-pengguna',
         columns: [
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { data: 'name', name: 'name' },
+            { data: 'nama', name: 'nama' },
             { data: 'username', name: 'username' },
             { data: 'telp', name: 'telp' },
-            { data: 'level', name: 'level' },
+            { data: 'email', name: 'email' },
             {
                 render: function (data, type, row) {
-                    return '<a href="/backend/admin/' + row['id'] + '/edit" class="btn btn-success"><i class="fa fa-wrench"></i></a> <button class="btn btn-danger" onclick="hapusdata(' + row['id'] + ')"><i class="fa fa-trash"></i></button>'
+                    return '<a href="/backend/pengguna/' + row['id'] + '/edit" class="btn btn-success"><i class="fa fa-wrench"></i></a> <button class="btn btn-danger" onclick="hapusdata(' + row['id'] + ')"><i class="fa fa-trash"></i></button>'
                 },
                 "className": 'text-center',
                 "orderable": false,
@@ -55,7 +55,7 @@ function hapusdata(kode) {
             });
             $.ajax({
                 type: 'DELETE',
-                url: '/backend/admin/' + kode,
+                url: '/backend/pengguna/' + kode,
                 data: {
                     '_token': $('input[name=_token]').val(),
                 },

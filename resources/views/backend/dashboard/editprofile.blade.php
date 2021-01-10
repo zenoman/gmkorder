@@ -24,7 +24,7 @@
                         <h3 class="card-title">Edit Profile Anda</h3>
                     </div>
                     <form method="POST" onsubmit="return validasiinput();" role="form" enctype="multipart/form-data"
-                        action="{{url('/edit-profile/'.$data->id)}}">
+                        action="{{url('backend/edit-profile/'.$data->id)}}">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">

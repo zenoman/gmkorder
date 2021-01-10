@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0 text-dark"> Admin</h1>
+                    <h1 class="m-0 text-dark"> Pengguna</h1>
                 </div>
             </div>
         </div>
@@ -33,9 +33,9 @@
                     @endif
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">List Data Admin</h3>
+                            <h3 class="card-title">List Data Pengguna</h3>
                             <div class="card-tools">
-                                <a href="{{url('backend/admin/create')}}">
+                                <a href="{{url('backend/pengguna/create')}}">
                                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i>
                                         Tambah
                                         Data
@@ -52,7 +52,7 @@
                                             <th>Nama</th>
                                             <th>Username</th>
                                             <th>Telp</th>
-                                            <th>Level</th>
+                                            <th>Email</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
@@ -65,7 +65,7 @@
                                             <th>Nama</th>
                                             <th>Username</th>
                                             <th>Telp</th>
-                                            <th>Level</th>
+                                            <th>Email</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -92,5 +92,5 @@ $(function() {
     $('#list-data').DataTable();
 });
 </script> -->
-<script src="{{asset('customjs/backend/admin.js')}}"></script> datatable plugin
+<script src="{{asset('customjs/backend/pengguna.js')}}"></script> datatable plugin
 @endsection
