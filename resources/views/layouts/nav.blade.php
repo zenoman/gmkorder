@@ -1,9 +1,9 @@
-<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+<nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
     <div class="container">
-        <a href="#" class="navbar-brand">
+        <a href="{{url('backend/dashboard')}}" class="navbar-brand">
             <!-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8"> -->
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">GMK-ORDER</span>
         </a>
 
         <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -22,8 +22,8 @@
                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                         <li><a href="{{url('backend/admin')}}" class="dropdown-item">Admin </a></li>
                         <li><a href="{{url('backend/pengguna')}}" class="dropdown-item">Pengguna</a></li>
-
                         <li class="dropdown-divider"></li>
+                        <li><a href="{{url('backend/kategori-produk')}}" class="dropdown-item">Kategor Produk</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -74,8 +74,8 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar"
-                                class="img-size-50 mr-3 img-circle">
+                            <!-- <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar"
+                                class="img-size-50 mr-3 img-circle"> -->
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Brad Diesel
@@ -91,8 +91,8 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar"
-                                class="img-size-50 img-circle mr-3">
+                            <!-- <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar"
+                                class="img-size-50 img-circle mr-3"> -->
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     John Pierce
@@ -108,8 +108,8 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar"
-                                class="img-size-50 img-circle mr-3">
+                            <!-- <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar"
+                                class="img-size-50 img-circle mr-3"> -->
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Nora Silvester

@@ -24,7 +24,7 @@
   <!-- Content Wrapper. Contains page content -->
   @yield('content')
   
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control-sidebar-dark" style="height:100%;">
     <div class="p-3">
       <h5>Title</h5>
       <p>Sidebar content</p>

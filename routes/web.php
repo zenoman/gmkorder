@@ -27,4 +27,8 @@ Route::prefix('backend')->group(function () {
     //pengguna
     Route::get('/data-pengguna','backend\PenggunaController@listdata');
     Route::resource('/pengguna','backend\PenggunaController');
+
+    //kategori produk
+    Route::get('/data-kategori-produk','backend\KategoriProdukController@listdata');
+    Route::resource('/kategori-produk','backend\KategoriProdukController');
 });

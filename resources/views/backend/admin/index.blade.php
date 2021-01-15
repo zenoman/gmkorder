@@ -31,7 +31,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <div class="card card-primary">
+                    <div class="card card-dark">
                         <div class="card-header">
                             <h3 class="card-title">List Data Admin</h3>
                             <div class="card-tools">

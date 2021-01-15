@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DataTables;
 use Hash;
+use File;
 use DB;
 
 class PenggunaController extends Controller
@@ -16,7 +17,6 @@ class PenggunaController extends Controller
     }
 
     //=================================================================
-    
     public function index()
     {
         return view('backend.pengguna.index');
@@ -61,38 +61,100 @@ class PenggunaController extends Controller
         return redirect('backend/pengguna')->with('status','Sukses menyimpan data');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function show($id)
     {
         //
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
+    //=================================================================
     public function edit($id)
     {
-        //
+        $data = DB::table('pengguna')->where('id',$id)->get();
+        return view('backend.pengguna.edit',compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function update(Request $request, $id)
     {
-        //
+        $datalama = DB::table('pengguna')->where('id',$id)->get();
+        foreach($datalama as $row){
+            $olduser = $row->username;
+            $oldemail = $row->email;
+            $oldtelp = $row->telp;
+            $oldimage = $row->gambar;
+        }
+
+        if($request->username != $olduser){
+            $validated = $request->validate([
+                'username' => 'required|unique:pengguna',
+            ]);
+        }
+
+        if($request->email != $oldemail){
+            $validated = $request->validate([
+                'email' => 'required|unique:pengguna',
+            ]);
+        }
+
+        if($request->telp != $oldtelp){
+            $validated = $request->validate([
+                'telp' => 'required|unique:pengguna',
+            ]);
+        }
+        if($request->hasFile('gambar')){
+            File::delete('img/pengguna/'.$oldimage);
+            $nameland=$request->file('gambar')->getClientOriginalname();
+            $lower_file_name=strtolower($nameland);
+            $replace_space=str_replace(' ', '-', $lower_file_name);
+            $finalname=time().'-'.$replace_space;
+            $destination=public_path('img/pengguna');
+            $request->file('gambar')->move($destination,$finalname);
+            if($request->password =='' ){
+                DB::table('pengguna')
+                ->where('id',$id)
+                ->update([
+                    'nama'=>$request->nama,
+                    'username'=>$request->username,
+                    'email'=>$request->email,
+                    'telp'=>$request->telp,
+                    'gambar'=>$finalname,
+                ]);
+            }else{
+                DB::table('pengguna')
+                ->where('id',$id)
+                ->update([
+                    'nama'=>$request->nama,
+                    'username'=>$request->username,
+                    'email'=>$request->email,
+                    'telp'=>$request->telp,
+                    'gambar'=>$finalname,
+                    'password'=>Hash::make($request->password),
+                ]);
+            }
+        }else{
+            if($request->password =='' ){
+                DB::table('pengguna')
+                ->where('id',$id)
+                ->update([
+                    'nama'=>$request->nama,
+                    'username'=>$request->username,
+                    'email'=>$request->email,
+                    'telp'=>$request->telp,
+                ]);
+            }else{
+                DB::table('pengguna')
+                ->where('id',$id)
+                ->update([
+                    'nama'=>$request->nama,
+                    'username'=>$request->username,
+                    'email'=>$request->email,
+                    'telp'=>$request->telp,
+                    'password'=>Hash::make($request->password),
+                ]);
+            }
+        }
+        return redirect('backend/pengguna')->with('status','Sukses Mengedit Data');
     }
     
     //=================================================================

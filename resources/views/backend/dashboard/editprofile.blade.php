@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
             <div class="col-12">
-                <div class="card card-warning">
+                <div class="card card-dark">
                     <div class="card-header">
                         <h3 class="card-title">Edit Profile Anda</h3>
                     </div>
@@ -65,7 +65,7 @@
 
                         <div class="card-footer">
                             <button type="reset" onclick="history.go(-1)" class="btn btn-danger">Kembali</button>
-                            <button type="submit" class="btn btn-primary float-right">Simpan</button>
+                            <button type="submit" class="btn btn-dark float-right">Simpan</button>
                         </div>
                     </form>
                 </div>

@@ -7,6 +7,13 @@
 @section('customcss')
 <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
+<style>
+#list-data {
+td,th {
+        vertical-align: middle;
+    }
+}
+</style>
 @endsection
 
 @section('content')
@@ -15,7 +22,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0 text-dark"> Pengguna</h1>
+                    <h1 class="m-0 text-dark"> Kategori Produk</h1>
                 </div>
             </div>
         </div>
@@ -33,9 +40,9 @@
                     @endif
                     <div class="card card-dark">
                         <div class="card-header">
-                            <h3 class="card-title">List Data Pengguna</h3>
+                            <h3 class="card-title">List Data Kategori Produk</h3>
                             <div class="card-tools">
-                                <a href="{{url('backend/pengguna/create')}}">
+                                <a href="{{url('backend/kategori-produk/create')}}">
                                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i>
                                         Tambah
                                         Data
@@ -49,10 +56,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Gambar</th>
                                             <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Email</th>
+                                            <th>Slug</th>
+                                            <th>Status</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
@@ -62,10 +69,10 @@
                                     <tfoot>
                                         <tr>
                                             <th>No</th>
+                                            <th>Gambar</th>
                                             <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Email</th>
+                                            <th>Slug</th>
+                                            <th>Status</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -87,10 +94,5 @@
 @endsection
 
 @section('customscripts')
-<!-- <script>
-$(function() {
-    $('#list-data').DataTable();
-});
-</script> -->
-<script src="{{asset('customjs/backend/pengguna.js')}}"></script> datatable plugin
+<script src="{{asset('customjs/backend/kategoriproduk.js')}}"></script> datatable plugin
 @endsection
