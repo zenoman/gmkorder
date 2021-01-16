@@ -23,7 +23,8 @@
                         <li><a href="{{url('backend/admin')}}" class="dropdown-item">Admin </a></li>
                         <li><a href="{{url('backend/pengguna')}}" class="dropdown-item">Pengguna</a></li>
                         <li class="dropdown-divider"></li>
-                        <li><a href="{{url('backend/kategori-produk')}}" class="dropdown-item">Kategor Produk</a></li>
+                        <li><a href="{{url('backend/kategori-produk')}}" class="dropdown-item">Kategori Produk</a></li>
+                        <li><a href="{{url('backend/produk')}}" class="dropdown-item">Produk</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

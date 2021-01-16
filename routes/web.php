@@ -15,7 +15,7 @@ Route::post('user-register', 'Auth\PenggunaLoginController@register')->name('pen
 Route::get('/profil-saya', 'frontend\HomeController@profilsaya')->name('profil-saya');
 
 //==================================================================================backend
-Route::prefix('backend')->group(function () {
+Route::prefix('backend')->group(function(){
     Route::get('/dashboard', 'backend\HomeController@index')->name('dashboard');
     Route::get('/edit-profile', 'backend\HomeController@editprofile')->name('editprofile');
     Route::post('/edit-profile/{id}', 'backend\HomeController@aksieditprofile');
@@ -31,4 +31,12 @@ Route::prefix('backend')->group(function () {
     //kategori produk
     Route::get('/data-kategori-produk','backend\KategoriProdukController@listdata');
     Route::resource('/kategori-produk','backend\KategoriProdukController');
+
+    //produk
+    Route::get('/data-produk','backend\ProdukController@listdata');
+    Route::resource('/produk','backend\ProdukController');
+
+    //Gambar produk
+    Route::post('/produk/add-gambar-produk','backend\ProdukController@addgambar');
+    Route::delete('/produk/hapus-gambar/{id}','backend\ProdukController@hapusgambar');
 });

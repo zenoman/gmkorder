@@ -39,18 +39,23 @@ class KategoriProdukController extends Controller
     public function store(Request $request)
     {
         if($request->hasFile('gambar')) {
-            
             $image = $request->file('gambar');
             $input['imagename'] = time().'-'.$image->getClientOriginalName();
-         
             $destinationPath = public_path('img/kategoriproduk/thumbnail');
             $img = Image::make($image->getRealPath());
             $img->resize(150,null, function ($constraint){$constraint->aspectRatio();})
             ->save($destinationPath.'/'.$input['imagename']);
-
             $destinationPath = public_path('img/kategoriproduk');
             $image->move($destinationPath, $input['imagename']);
-       
+        }
+        if($request->hasFile('gambarlain')) {
+            $dataimg = [];
+            foreach($request->gambarlain as $gmbrlain){
+                $dataimg[] = [
+                    'kode_barang'=>$gmbrlain['kode'],
+                    'nama'=>$gmbrlain['nama'],
+                ];
+            }
         }
         DB::table('kategori_produk')->insert([
             'nama'=>$request->nama,
@@ -61,46 +66,62 @@ class KategoriProdukController extends Controller
         return redirect('backend/kategori-produk')->with('status','Sukses menyimpan data');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function edit($id)
     {
-        //
+        $data = DB::table('kategori_produk')->where('id',$id)->get();
+        return view('backend.kategoriproduk.edit',compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function update(Request $request, $id)
     {
-        //
+        $olddata = DB::table('kategori_produk')->where('id',$id)->first();
+
+        if($request->hasFile('gambar')) {
+            File::delete('img/kategoriproduk/'.$olddata->gambar);
+            File::delete('img/kategoriproduk/thumbnail/'.$olddata->gambar);
+
+            $image = $request->file('gambar');
+            $input['imagename'] = time().'-'.$image->getClientOriginalName();
+         
+            $destinationPath = public_path('img/kategoriproduk/thumbnail');
+            $img = Image::make($image->getRealPath());
+            $img->resize(150,null, function ($constraint){$constraint->aspectRatio();})
+            ->save($destinationPath.'/'.$input['imagename']);
+
+            $destinationPath = public_path('img/kategoriproduk');
+            $image->move($destinationPath, $input['imagename']);
+
+            DB::table('kategori_produk')
+            ->where('id',$id)
+            ->update([
+                'nama'=>$request->nama,
+                'slug'=>str_replace(' ','-',strtolower($request->nama)),
+                'gambar'=>$input['imagename'],
+                'status'=>$request->status,
+            ]);
+       
+        }else{
+            DB::table('kategori_produk')
+            ->where('id',$id)
+            ->update([
+                'nama'=>$request->nama,
+                'slug'=>str_replace(' ','-',strtolower($request->nama)),
+                'status'=>$request->status,
+            ]);
+        }
+        
+        return redirect('backend/kategori-produk')->with('status','Sukses mengedit data');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //=================================================================
     public function destroy($id)
     {
         $data = DB::table('kategori_produk')->where('id',$id)->first();

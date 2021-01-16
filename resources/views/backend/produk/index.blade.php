@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0 text-dark"> Admin</h1>
+                    <h1 class="m-0 text-dark"> Produk</h1>
                 </div>
             </div>
         </div>
@@ -33,9 +33,14 @@
                     @endif
                     <div class="card card-dark">
                         <div class="card-header">
-                            <h3 class="card-title">List Data Admin</h3>
+                            <h3 class="card-title">List Data Produk</h3>
                             <div class="card-tools">
-                                <a href="{{url('backend/admin/create')}}">
+                                <a href="{{url('backend/produk/create')}}">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-file-excel"></i>
+                                        Import / Export
+                                    </button>
+                                </a>
+                                <a href="{{url('backend/produk/create')}}">
                                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i>
                                         Tambah
                                         Data
@@ -49,10 +54,11 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Level</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-right">Harga Jual</th>
+                                            <th class="text-right">Stok (Pcs)</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
@@ -62,10 +68,11 @@
                                     <tfoot>
                                         <tr>
                                             <th>No</th>
+                                            <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Level</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-right">Harga Jual</th>
+                                            <th class="text-right">Stok (Pcs)</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -87,10 +94,5 @@
 @endsection
 
 @section('customscripts')
-<!-- <script>
-$(function() {
-    $('#list-data').DataTable();
-});
-</script> -->
-<script src="{{asset('customjs/backend/admin.js')}}"></script>
+<script src="{{asset('customjs/backend/produk.js')}}"></script>
 @endsection

@@ -24,8 +24,9 @@ $(function () {
                 "data": null,
             },
         ],
-        pageLength: 10,
-        lengthMenu: [[5, 10, 20], [5, 10, 20]]
+        
+        pageLength: 50,
+        lengthMenu: [[50, 80, 100, 200, 500], [50, 80, 100, 200, 500]]
     });
 
 });
