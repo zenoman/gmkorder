@@ -1,0 +1,269 @@
+External ID,Route,Applicable on Warehouse,usage_type
+,51110.00 Persed Awal Log,TRUE,production
+,51120.00 Persed Awal Veneer F/B Beli,TRUE,production
+,51130.00 Persed Awal Veneer Core Beli,TRUE,production
+,5113101 Persediaan Log,TRUE,production
+,5113110 Persed Awal Plywood,TRUE,production
+,5119101 Beban Pokok Penjualan,TRUE,production
+,5119111 Beban Pembelian Produksi (Sementara),TRUE,production
+,5119121 Beban Pembelian Non Produksi (sementara),TRUE,production
+,51200.00 Pembelian Bahan Baku,TRUE,production
+,51210.00 Pembelian Log,TRUE,production
+,51220.00 Pembelian Veneer F/B,TRUE,production
+,51230.00 Pembelian Veneer Core,TRUE,production
+,51240.00 Pembelian Log Lain-lain,TRUE,production
+,51250.00 Perjalanan Grader,TRUE,production
+,51251.00 Fee Grader,TRUE,production
+,51252.00 Grading Log,TRUE,production
+,51253.00 Gaji/Upah Karyawan Log Yard,TRUE,production
+,51254.00 Upah Borongan Log Yard,TRUE,production
+,51255.00 Operasional Log Yard,TRUE,production
+,51310.00 Persediaan Log,TRUE,production
+,51320.00 Persed Veneer F/B Beli,TRUE,production
+,51330.00 Persed Veneer Core Beli,TRUE,production
+,52100.00 Persed Awal WIP Plywood,TRUE,production
+,52120.00 Persed. Awal Veneer F/B,TRUE,production
+,52130.00 Persed. Awal Veneer Core,TRUE,production
+,53100.00 Persed WIP Plywood,TRUE,production
+,53200.00 Persed Veneer F/B,TRUE,production
+,53300.00 Persed Veneer Core,TRUE,production
+,54100.00 Persed Awal Plywood,TRUE,production
+,55100.00 Persediaan Plywood,TRUE,production
+,56100.00 Gaji/Upah Produksi,TRUE,production
+,56111.00 Upah Karyawan Harian Produksi,TRUE,production
+,56112.00 Upah Borongan Produksi,TRUE,production
+,56113.00 Jamsostek,TRUE,production
+,56114.00 PPh Psl 21,TRUE,production
+,56120.00 Bahan Glue,TRUE,production
+,56130.00 Bahan Pembantu Produksi,TRUE,production
+,56140.00 Suku Cadang Produksi,TRUE,production
+,56150.00 BBM & Pelumas Produksi,TRUE,production
+,56160.00 Listrik,TRUE,production
+,56170.00 Preventive Maintenance,TRUE,production
+,56180.00 Pembuatan Peralatan/Mesin,TRUE,production
+,57100.00 Angkutan Log,TRUE,production
+,57200.00 Angkutan Veneer,TRUE,production
+,57300.00 Pengeringan,TRUE,production
+,57400.00 Lain-lain Produksi,TRUE,production
+,61110.00 Iklan & Advertising,TRUE,non_production
+,61120.00 Pengiriman Sampel,TRUE,non_production
+,61130.00 Perjamuan & Presentasi Klien,TRUE,non_production
+,61140.00 Fee Marketing,TRUE,non_production
+,61150.00 Biaya Loading,TRUE,non_production
+,61201.00 Perawatan Kendaraan,TRUE,non_production
+,61202.00 Perbaikan Kendaraan,TRUE,non_production
+,"61203.00 Surat, Dokumen Kendaraan",TRUE,non_production
+,61204.00 Denda Kendaraan,TRUE,non_production
+,61290.00 Biaya Lain2 Kendaraan,TRUE,non_production
+,61310.00 Fee Pencari Bhn Baku,TRUE,non_production
+,61330.00 Fee Konsultan - Tanzil,TRUE,non_production
+,61331.00 Fee Konsultan - PT Citra,TRUE,non_production
+,61332.00 Fee Konsultan - Lainnya,TRUE,non_production
+,61390.00 Komisi & Fee Lainnya,TRUE,non_production
+,61501.00 Penyusutan Bangunan Produksi,TRUE,non_production
+,61501.10 Penyusutan Bangunan Non Produksi,TRUE,non_production
+,61502.00 Penyusutan Mesin Produksi,TRUE,non_production
+,61503.00 Penyusutan Peralatan Produksi,TRUE,non_production
+,61504.00 Penyusutan Inventaris Kantor,TRUE,non_production
+,61505.00 Penyusutan Kendaraan,TRUE,non_production
+,61506.00 Penyusutan Alat Berat,TRUE,non_production
+,61507.00 Penyusutan Instalasi Listrik,TRUE,non_production
+,61508.00 Penyusutan Investasi Awal,TRUE,non_production
+,61509.00 Penyusutan Investasi Biaya Lainnya,TRUE,non_production
+,61510.00 Penyusutan Sewa Tanah & Bangunan,TRUE,non_production
+,61511.00 Penyusutan SGU Kendaraan,TRUE,non_production
+,61610.00 Pemberian Discount,TRUE,non_production
+,61620.00 Penerimaan Discount,TRUE,non_production
+,61710.00 Angkutan Pembelian Barang,TRUE,non_production
+,61720.00 Angkutan Plywood,TRUE,non_production
+,61721.00 Angkutan Pengiriman Veneer,TRUE,non_production
+,61730.00 Fee Bongkar Barang,TRUE,non_production
+,61731.00 Fee Muat Barang,TRUE,non_production
+,61790.00 Angkutan Lainnya,TRUE,non_production
+,61810.00 Asuransi Bangunan,TRUE,non_production
+,61820.00 Asuransi Mesin,TRUE,non_production
+,61830.00 Asuransi Kendaraan,TRUE,non_production
+,61840.00 Asuransi Kesehatan,TRUE,non_production
+,61910.00 Bunga Kendaraan/Alat Berat,TRUE,non_production
+,61920.00 Bunga Mesin/Peralatan,TRUE,non_production
+,61925.00 Bunga Pinjaman Bank,TRUE,non_production
+,61930.00 Bunga Pinjaman Lainnya,TRUE,non_production
+,62010.00 Denda Pengiriman,TRUE,non_production
+,62020.00 Denda Pajak,TRUE,non_production
+,62030.00 Denda Lainnya,TRUE,non_production
+,62110.00 Leasing Mesin & Peralatan,TRUE,non_production
+,62120.00 Leasing Kendaraan,TRUE,non_production
+,62130.00 Leasing Alat Berat,TRUE,non_production
+,62190.00 Leasing Lainnya,TRUE,non_production
+,62210.00 Dokumen Kehutanan,TRUE,non_production
+,62220.00 Dokumen Export - Import,TRUE,non_production
+,62230.00 Retribusi Daerah,TRUE,non_production
+,62240.00 Profesional Intansi terkait,TRUE,non_production
+,62250.00 Pengurusan Perijinan,TRUE,non_production
+,62290.00 Pengurusan Dokumen Lainnya,TRUE,non_production
+,62301.00 Bhn Pembantu Non Produksi,TRUE,non_production
+,62302.00 Suku Cadang Non Produksi,TRUE,non_production
+,62303.00 BBM & Pelumas Non Produksi,TRUE,non_production
+,62304.00 Keamanan & Kebersihan,TRUE,non_production
+,"62305.00 Pengiriman Dokumen, Surat2",TRUE,non_production
+,"62306.00 Meterai, surat berharga",TRUE,non_production
+,62307.00 Foto Copy & Penjilidan,TRUE,non_production
+,62308.00 Barang Cetakan,TRUE,non_production
+,62309.00 Alat Tulis Kantor,TRUE,non_production
+,62310.00 Perlengkapan Kantor,TRUE,non_production
+,62311.00 Keperluan RT Kantor,TRUE,non_production
+,"62312.00 Keperluan Mess, Dapur",TRUE,non_production
+,62313.00 Perjalanan Dinas,TRUE,non_production
+,62314.00 Pendidikan & Pelatihan,TRUE,non_production
+,"62315.00 Transportasi, Parkir, Toll",TRUE,non_production
+,"62316.00 Surat Kabar, Majalah",TRUE,non_production
+,62317.00 Sewa Peralatan lainnya,TRUE,non_production
+,"62318.00 Administrasi Bank, Transfer",TRUE,non_production
+,62319.00 Sewa Kantor/Mess/Tanah,TRUE,non_production
+,62320.00 Baju Seragam,TRUE,non_production
+,62321.00 Papan/Pallet,TRUE,non_production
+,62399.00 Biaya Kantor Lainnya,TRUE,non_production
+,62411.00 Kesejahteraan Staf/Karyawan,TRUE,non_production
+,62412.00 Rekreasi,TRUE,non_production
+,"62413.00 Makan, Natura Lainnya",TRUE,non_production
+,62421.00 Tunjangan Transportasi,TRUE,non_production
+,62422.00 Tunjangan Kesehatan,TRUE,non_production
+,62423.00 Tunjangan Perumahan,TRUE,non_production
+,62424.00 Tunjangan Lainnya,TRUE,non_production
+,62431.00 Gaji Staf/kary. Bulanan,TRUE,non_production
+,62432.00 PPh Psl 21,TRUE,non_production
+,62433.00 BPJS Staf,TRUE,non_production
+,62440.00 Lembur,TRUE,non_production
+,62450.00 Insentif,TRUE,non_production
+,62460.00 Pengobatan,TRUE,non_production
+,62470.00 Upah Karyawan Keluar/PHK,TRUE,non_production
+,"62480.00 Cuti, THR, Bonus",TRUE,non_production
+,62490.00 Upah Harian Non Produksi,TRUE,non_production
+,62491.00 Upah Borongan Non Produksi,TRUE,non_production
+,62510.00 Perawatan Inventaris,TRUE,non_production
+,62520.00 Perbaikan Inventaris,TRUE,non_production
+,62521.00 Perawatan Gedung,TRUE,non_production
+,62522.00 Perbaikan Gedung,TRUE,non_production
+,62523.00 Pemel. & Perbaikan Lainnya,TRUE,non_production
+,62551.00 Pengurusan RUPL AMDAL,TRUE,non_production
+,62552.00 Pembuatan Sarana Limbah,TRUE,non_production
+,62553.00 Survey AMDAL Dinas Terkait,TRUE,non_production
+,62554.00 Biaya Limbah Lainnya,TRUE,non_production
+,62610.00 Sumbangan Suka Duka,TRUE,non_production
+,62620.00 Sumbangan Umum,TRUE,non_production
+,62710.00 Pajak Bumi Bangunan/PBB,TRUE,non_production
+,62720.00 PPh Pasal 22,TRUE,non_production
+,62730.00 PPh Pasal 23,TRUE,non_production
+,62740.00 PPh Pasal 25,TRUE,non_production
+,62750.00 PPh Pasal 29,TRUE,non_production
+,62751.00 PPh Pasal 4 Ayat 2,TRUE,non_production
+,62760.00 Pajak Kurang Bayar,TRUE,non_production
+,62770.00 Pajak Lainnya,TRUE,non_production
+,62810.00 Telepon Kantor,TRUE,non_production
+,62811.00 Telepon Mess,TRUE,non_production
+,62820.00 Faximile Kantor,TRUE,non_production
+,62830.00 Pulsa HP Staf Kantor Pusat,TRUE,non_production
+,62832.00 Pulsa HP Kantor,TRUE,non_production
+,62833.00 Pulsa HP Staf Pabrik,TRUE,non_production
+,62841.00 Internet - IM2,TRUE,non_production
+,62842.00 Internet - Kantor Pabrik,TRUE,non_production
+,62843.00 Internet - Kantor Pusat,TRUE,non_production
+,62910.00 Gas,TRUE,non_production
+,62920.00 Listrik Non Produksi,TRUE,non_production
+,62930.00 Air Bersih PAM,TRUE,non_production
+,63110.00 Hotel & Penginapan,TRUE,non_production
+,63120.00 Perjamuan dgn Staf / Kary.,TRUE,non_production
+,63130.00 Entertainment Non Marketing,TRUE,non_production
+,64111.00 Bhn Bangunan Semen,TRUE,non_production
+,64112.00 Bhn Bang. Batu Bata/Batako,TRUE,non_production
+,64113.00 Bhn Bangunan Besi,TRUE,non_production
+,64119.00 Bhn Bangunan Lainnya,TRUE,non_production
+,64121.00 Bhn Galian Pasir,TRUE,non_production
+,64122.00 Bhn Galian Batu,TRUE,non_production
+,64123.00 Bhn Galian Tanah,TRUE,non_production
+,64129.00 Bahan Timbunan Lainnya,TRUE,non_production
+,"64130.00 Pembuatan Jalan, Uruk Tanah",TRUE,non_production
+,64140.00 Perombakan,TRUE,non_production
+,65110.00 Perjln Dinas Direksi & Kom.,TRUE,non_production
+,65120.00 Operasional Direksi & Kom.,TRUE,non_production
+,65121.00 Bunga Share Holder,TRUE,non_production
+,65122.00 Penarikan Share Holder,TRUE,non_production
+,65130.00 Lain-lain Direksi & Kom.,TRUE,non_production
+,65140.00 Lain-lain GM,TRUE,non_production
+,66110.00 Pembelian Bibit,TRUE,non_production
+,66120.00 Pnylngrn Penghij. & Reboisasi,TRUE,non_production
+,66226.00 Perjalanan Dinas Perijinan,TRUE,non_production
+,67100.00 Biaya PT Berkat Bersama Mandiri,TRUE,non_production
+,68100.00 Biaya PT Harapan Mandiri Jaya,TRUE,non_production
+,81100.00 Bunga Tabungan,TRUE,non_production
+,81200.00 Jasa Giro BCA - IDR,TRUE,non_production
+,81300.00 Jasa Giro BCA - USD,TRUE,non_production
+,81400.00 Jasa Giro MANDIRI - IDR,TRUE,non_production
+,81500.00 Jasa Giro MANDIRI - USD,TRUE,non_production
+,81600.00 Jasa Giro BPD PAPUA - IDR,TRUE,non_production
+,81700.00 Jasa Giro BPD PAPUA - USD,TRUE,non_production
+,81800.00 Jasa Giro BRI - IDR,TRUE,non_production
+,81900.00 Jasa Giro BRI - USD,TRUE,non_production
+,81901.00 Jasa Giro CIMB NIAGA - IDR,TRUE,non_production
+,81902.00 Jasa Giro CIMB NIAGA - USD,TRUE,non_production
+,81903.00 Jasa Giro BANK JATIM - IDR,TRUE,non_production
+,81904.00 Jasa Giro BANK JATIM - USD,TRUE,non_production
+,82100.00 Selisih Kurs,TRUE,non_production
+,82200.00 Pendapatan Bunga,TRUE,non_production
+,83100.00 Penjualan Mesin,TRUE,non_production
+,83200.00 Penjualan Peralatan,TRUE,non_production
+,83300.00 Penjualan Kendaraan,TRUE,non_production
+,83400.00 Penjualan Inventaris Kntr,TRUE,non_production
+,83500.00 Penjualan Alat Berat,TRUE,non_production
+,83600.00 Penjualan Bangunan,TRUE,non_production
+,84100.00 Penjualan Bahan Pembantu,TRUE,non_production
+,84200.00 Penjualan Bahan Glue,TRUE,non_production
+,84300.00 Penjualan Bahan Baku,TRUE,non_production
+,84400.00 Penjualan Suku Cadang,TRUE,non_production
+,84500.00 Pendapatan Lain-lain,TRUE,non_production
+,91110.00 Adm Bank BCA - IDR,TRUE,non_production
+,91120.00 Adm Bank BCA - USD,TRUE,non_production
+,91130.00 Adm Bank MANDIRI - IDR,TRUE,non_production
+,91140.00 Adm Bank MANDIRI - USD,TRUE,non_production
+,91150.00 Adm Bank BPD PAPUA - IDR,TRUE,non_production
+,91160.00 Adm Bank BPD PAPUA - USD,TRUE,non_production
+,91170.00 Adm Bank BRI - IDR,TRUE,non_production
+,91180.00 Adm Bank BRI - USD,TRUE,non_production
+,91181.00 Adm Bank CIMB NIAGA - IDR,TRUE,non_production
+,91182.00 Adm Bank CIMB NIAGA - USD,TRUE,non_production
+,91183.00 Adm Bank JATIM - IDR,TRUE,non_production
+,91184.00 Adm Bank JATIM - USD,TRUE,non_production
+,91185.00 Adm Bank DANAMON - IDR,TRUE,non_production
+,91210.00 Pajak Bank BCA - IDR,TRUE,non_production
+,91220.00 Pajak Bank BCA - USD,TRUE,non_production
+,91230.00 Pajak Bank MANDIRI - IDR,TRUE,non_production
+,91240.00 Pajak Bank MANDIRI - USD,TRUE,non_production
+,91250.00 Pajak Bank BPD PAPUA - IDR,TRUE,non_production
+,91260.00 Pajak Bank BPD PAPUA - USD,TRUE,non_production
+,91270.00 Pajak Bank BRI - IDR,TRUE,non_production
+,91280.00 Pajak Bank BRI - USD,TRUE,non_production
+,91281.00 Pajak Bank CIMB NIAGA - IDR,TRUE,non_production
+,91282.00 Pajak Bank CIMB NIAGA - USD,TRUE,non_production
+,91283.00 Pajak Bank JATIM - IDR,TRUE,non_production
+,91284.00 Pajak Bank JATIM - USD,TRUE,non_production
+,91285.00 Pajak Bank DANAMON - IDR,TRUE,non_production
+,92100.00 Pajak Penjualan Plywood,TRUE,non_production
+,92200.00 Pajak Penjualan Block Board,TRUE,non_production
+,92300.00 Pajak Penjualan Veneer,TRUE,non_production
+,92400.00 Pajak Penjualan Lain-lain,TRUE,non_production
+,93100.00 Selisih Pembulatan,TRUE,non_production
+,93200.00 Kurs Kurang Penjualan,TRUE,non_production
+,94100.00 Penjualan Mesin - Rugi,TRUE,non_production
+,94200.00 Penjualan Peralatan - Rugi,TRUE,non_production
+,94300.00 Penjualan Kendaraan - Rugi,TRUE,non_production
+,94400.00 Penj. Inv. Kantor - Rugi,TRUE,non_production
+,94500.00 Penj. Alat Berat - Rugi,TRUE,non_production
+,94600.00 Penjualan Bangunan - Rugi,TRUE,non_production
+,95100.00 Penj. Bhn Pembantu - Rugi,TRUE,non_production
+,95200.00 Penj. Bahan Glue - Rugi,TRUE,non_production
+,95300.00 Penj. Bahan Baku - Rugi,TRUE,non_production
+,95400.00 Penj. Suku Cadang - Rugi,TRUE,non_production
+,95500.00 Penj. Lain-lain - Rugi,TRUE,non_production
+,96100.00 Amortisasi Biaya Tangguhan,TRUE,non_production
+,96200.00 Amortisasi Biaya Lainnya,TRUE,non_production
+,96399.00 Kerugian Biaya Lainnya,TRUE,non_production

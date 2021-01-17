@@ -32,6 +32,12 @@ Route::prefix('backend')->group(function(){
     Route::get('/data-kategori-produk','backend\KategoriProdukController@listdata');
     Route::resource('/kategori-produk','backend\KategoriProdukController');
 
+    //import produk
+    Route::get('/import-export/produk','backend\ProdukController@importexport');
+    Route::post('/import-export/produk/import','backend\ProdukController@importproduk');
+    Route::get('/import-export/produk/export','backend\ProdukController@exportproduk');
+    Route::get('/import-export/produk-kategori/export','backend\ProdukController@exportprodukkategori');
+
     //produk
     Route::get('/data-produk','backend\ProdukController@listdata');
     Route::resource('/produk','backend\ProdukController');
@@ -39,4 +45,6 @@ Route::prefix('backend')->group(function(){
     //Gambar produk
     Route::post('/produk/add-gambar-produk','backend\ProdukController@addgambar');
     Route::delete('/produk/hapus-gambar/{id}','backend\ProdukController@hapusgambar');
+
+    
 });

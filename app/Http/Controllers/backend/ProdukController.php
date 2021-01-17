@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Exports\ProdukExport;
+use App\Exports\KategoriProdukExport;
+use App\Imports\ProdukImport;
 use Illuminate\Http\Request;
 use DataTables;
+use Session;
 use Image;
 use Hash;
 use File;
+use Excel;
 use DB;
 
 class ProdukController extends Controller
@@ -83,12 +88,6 @@ class ProdukController extends Controller
         ]);
         
         return redirect('backend/produk')->with('status','Sukses menyimpan data');
-    }
-
-    //=================================================================
-    public function show($id)
-    {
-        //
     }
 
     //=================================================================
@@ -200,14 +199,51 @@ class ProdukController extends Controller
         return back()->with('statusimage','Gambar berhasil disimpan');
     }
 
-     //=================================================================
-     public function hapusgambar(Request $request, $id)
-     {
-        $dataimage = DB::table('gambar_produk')->where('id',$id)->get();
-        foreach($dataimage as $oldimg){
-            File::delete('img/gambarproduk/'.$oldimg->nama);
-        } 
-        DB::table('gambar_produk')->where('id',$id)->delete();
-        return back()->with('statusimage','Gambar berhasil dihapus');
-     }
+    //=================================================================
+    public function hapusgambar(Request $request, $id)
+    {
+    $dataimage = DB::table('gambar_produk')->where('id',$id)->get();
+    foreach($dataimage as $oldimg){
+        File::delete('img/gambarproduk/'.$oldimg->nama);
+    } 
+    DB::table('gambar_produk')->where('id',$id)->delete();
+    return back()->with('statusimage','Gambar berhasil dihapus');
+    }
+
+    //=================================================================
+    public function importexport()
+    {
+        return view('backend.produk.importexport');
+    }
+
+    //=================================================================
+    public function exportproduk()
+    {
+        $namafile = "Data_Produk.xls";   
+        return Excel::download(new ProdukExport(),$namafile);
+    }
+
+    //=================================================================
+    public function exportprodukkategori()
+    {
+        $namafile = "Data_kategori_Produk.xls";   
+        return Excel::download(new KategoriProdukExport(),$namafile);
+    }
+
+    //=================================================================
+    public function importproduk(Request $request)
+    {
+        try {
+            if($request->hasFile('file_excel')){
+                $error = Excel::import(new ProdukImport, request()->file('file_excel'));
+                return redirect('backend/produk')->with('status','Berhasil Import Data');
+             }else{
+                return redirect('backend/produk');
+             }
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+             $failures = $e->failures();
+             Session::flash('errorexcel', $failures);
+             return back();
+        }
+    }
 }

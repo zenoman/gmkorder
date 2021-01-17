@@ -1,0 +1,2 @@
+External ID,Operation Type,Reference Sequence,Type of Operation,Default Source Location,Default Destination Location
+,Gudang Sparepart -> Lokasi Sementara,Picking INT,Internal,Physical Locations/WH/Gudang Sparepart,Physical Locations/WH/Lokasi Sementara

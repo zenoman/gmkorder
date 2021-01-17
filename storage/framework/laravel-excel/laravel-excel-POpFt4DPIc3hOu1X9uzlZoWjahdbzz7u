@@ -1,0 +1,270 @@
+External ID,Location Name,Parent Location,Location Type,Stock Valuation Account (Incoming),Stock Valuation Account (Outgoing),jangan di import
+,Lokasi Pemakaian - 51110.00 Persed Awal Log,Virtual Locations,Inventory Loss,51110.00 Persed Awal Log,51110.00 Persed Awal Log,
+,Lokasi Pemakaian - 51120.00 Persed Awal Veneer F/B Beli,Virtual Locations,Inventory Loss,51120.00 Persed Awal Veneer F/B Beli,51120.00 Persed Awal Veneer F/B Beli,51110.00 Persed Awal Log
+,Lokasi Pemakaian - 51130.00 Persed Awal Veneer Core Beli,Virtual Locations,Inventory Loss,51130.00 Persed Awal Veneer Core Beli,51130.00 Persed Awal Veneer Core Beli,51120.00 Persed Awal Veneer F/B Beli
+,Lokasi Pemakaian - 5113101 Persediaan Log,Virtual Locations,Inventory Loss,5113101 Persediaan Log,5113101 Persediaan Log,51130.00 Persed Awal Veneer Core Beli
+,Lokasi Pemakaian - 5113110 Persed Awal Plywood,Virtual Locations,Inventory Loss,5113110 Persed Awal Plywood,5113110 Persed Awal Plywood,5113101 Persediaan Log
+,Lokasi Pemakaian - 5119101 Beban Pokok Penjualan,Virtual Locations,Inventory Loss,5119101 Beban Pokok Penjualan,5119101 Beban Pokok Penjualan,5113110 Persed Awal Plywood
+,Lokasi Pemakaian - 5119111 Beban Pembelian Produksi (Sementara),Virtual Locations,Inventory Loss,5119111 Beban Pembelian Produksi (Sementara),5119111 Beban Pembelian Produksi (Sementara),5119101 Beban Pokok Penjualan
+,Lokasi Pemakaian - 5119121 Beban Pembelian Non Produksi (sementara),Virtual Locations,Inventory Loss,5119121 Beban Pembelian Non Produksi (sementara),5119121 Beban Pembelian Non Produksi (sementara),5119111 Beban Pembelian Produksi (Sementara)
+,Lokasi Pemakaian - 51200.00 Pembelian Bahan Baku,Virtual Locations,Inventory Loss,51200.00 Pembelian Bahan Baku,51200.00 Pembelian Bahan Baku,5119121 Beban Pembelian Non Produksi (sementara)
+,Lokasi Pemakaian - 51210.00 Pembelian Log,Virtual Locations,Inventory Loss,51210.00 Pembelian Log,51210.00 Pembelian Log,51200.00 Pembelian Bahan Baku
+,Lokasi Pemakaian - 51220.00 Pembelian Veneer F/B,Virtual Locations,Inventory Loss,51220.00 Pembelian Veneer F/B,51220.00 Pembelian Veneer F/B,51210.00 Pembelian Log
+,Lokasi Pemakaian - 51230.00 Pembelian Veneer Core,Virtual Locations,Inventory Loss,51230.00 Pembelian Veneer Core,51230.00 Pembelian Veneer Core,51220.00 Pembelian Veneer F/B
+,Lokasi Pemakaian - 51240.00 Pembelian Log Lain-lain,Virtual Locations,Inventory Loss,51240.00 Pembelian Log Lain-lain,51240.00 Pembelian Log Lain-lain,51230.00 Pembelian Veneer Core
+,Lokasi Pemakaian - 51250.00 Perjalanan Grader,Virtual Locations,Inventory Loss,51250.00 Perjalanan Grader,51250.00 Perjalanan Grader,51240.00 Pembelian Log Lain-lain
+,Lokasi Pemakaian - 51251.00 Fee Grader,Virtual Locations,Inventory Loss,51251.00 Fee Grader,51251.00 Fee Grader,51250.00 Perjalanan Grader
+,Lokasi Pemakaian - 51252.00 Grading Log,Virtual Locations,Inventory Loss,51252.00 Grading Log,51252.00 Grading Log,51251.00 Fee Grader
+,Lokasi Pemakaian - 51253.00 Gaji/Upah Karyawan Log Yard,Virtual Locations,Inventory Loss,51253.00 Gaji/Upah Karyawan Log Yard,51253.00 Gaji/Upah Karyawan Log Yard,51252.00 Grading Log
+,Lokasi Pemakaian - 51254.00 Upah Borongan Log Yard,Virtual Locations,Inventory Loss,51254.00 Upah Borongan Log Yard,51254.00 Upah Borongan Log Yard,51253.00 Gaji/Upah Karyawan Log Yard
+,Lokasi Pemakaian - 51255.00 Operasional Log Yard,Virtual Locations,Inventory Loss,51255.00 Operasional Log Yard,51255.00 Operasional Log Yard,51254.00 Upah Borongan Log Yard
+,Lokasi Pemakaian - 51310.00 Persediaan Log,Virtual Locations,Inventory Loss,51310.00 Persediaan Log,51310.00 Persediaan Log,51255.00 Operasional Log Yard
+,Lokasi Pemakaian - 51320.00 Persed Veneer F/B Beli,Virtual Locations,Inventory Loss,51320.00 Persed Veneer F/B Beli,51320.00 Persed Veneer F/B Beli,51310.00 Persediaan Log
+,Lokasi Pemakaian - 51330.00 Persed Veneer Core Beli,Virtual Locations,Inventory Loss,51330.00 Persed Veneer Core Beli,51330.00 Persed Veneer Core Beli,51320.00 Persed Veneer F/B Beli
+,Lokasi Pemakaian - 52100.00 Persed Awal WIP Plywood,Virtual Locations,Inventory Loss,52100.00 Persed Awal WIP Plywood,52100.00 Persed Awal WIP Plywood,51330.00 Persed Veneer Core Beli
+,Lokasi Pemakaian - 52120.00 Persed. Awal Veneer F/B,Virtual Locations,Inventory Loss,52120.00 Persed. Awal Veneer F/B,52120.00 Persed. Awal Veneer F/B,52100.00 Persed Awal WIP Plywood
+,Lokasi Pemakaian - 52130.00 Persed. Awal Veneer Core,Virtual Locations,Inventory Loss,52130.00 Persed. Awal Veneer Core,52130.00 Persed. Awal Veneer Core,52120.00 Persed. Awal Veneer F/B
+,Lokasi Pemakaian - 53100.00 Persed WIP Plywood,Virtual Locations,Inventory Loss,53100.00 Persed WIP Plywood,53100.00 Persed WIP Plywood,52130.00 Persed. Awal Veneer Core
+,Lokasi Pemakaian - 53200.00 Persed Veneer F/B,Virtual Locations,Inventory Loss,53200.00 Persed Veneer F/B,53200.00 Persed Veneer F/B,53100.00 Persed WIP Plywood
+,Lokasi Pemakaian - 53300.00 Persed Veneer Core,Virtual Locations,Inventory Loss,53300.00 Persed Veneer Core,53300.00 Persed Veneer Core,53200.00 Persed Veneer F/B
+,Lokasi Pemakaian - 54100.00 Persed Awal Plywood,Virtual Locations,Inventory Loss,54100.00 Persed Awal Plywood,54100.00 Persed Awal Plywood,53300.00 Persed Veneer Core
+,Lokasi Pemakaian - 55100.00 Persediaan Plywood,Virtual Locations,Inventory Loss,55100.00 Persediaan Plywood,55100.00 Persediaan Plywood,54100.00 Persed Awal Plywood
+,Lokasi Pemakaian - 56100.00 Gaji/Upah Produksi,Virtual Locations,Inventory Loss,56100.00 Gaji/Upah Produksi,56100.00 Gaji/Upah Produksi,55100.00 Persediaan Plywood
+,Lokasi Pemakaian - 56111.00 Upah Karyawan Harian Produksi,Virtual Locations,Inventory Loss,56111.00 Upah Karyawan Harian Produksi,56111.00 Upah Karyawan Harian Produksi,56100.00 Gaji/Upah Produksi
+,Lokasi Pemakaian - 56112.00 Upah Borongan Produksi,Virtual Locations,Inventory Loss,56112.00 Upah Borongan Produksi,56112.00 Upah Borongan Produksi,56111.00 Upah Karyawan Harian Produksi
+,Lokasi Pemakaian - 56113.00 Jamsostek,Virtual Locations,Inventory Loss,56113.00 Jamsostek,56113.00 Jamsostek,56112.00 Upah Borongan Produksi
+,Lokasi Pemakaian - 56114.00 PPh Psl 21,Virtual Locations,Inventory Loss,56114.00 PPh Psl 21,56114.00 PPh Psl 21,56113.00 Jamsostek
+,Lokasi Pemakaian - 56120.00 Bahan Glue,Virtual Locations,Inventory Loss,56120.00 Bahan Glue,56120.00 Bahan Glue,56114.00 PPh Psl 21
+,Lokasi Pemakaian - 56130.00 Bahan Pembantu Produksi,Virtual Locations,Inventory Loss,56130.00 Bahan Pembantu Produksi,56130.00 Bahan Pembantu Produksi,56120.00 Bahan Glue
+,Lokasi Pemakaian - 56140.00 Suku Cadang Produksi,Virtual Locations,Inventory Loss,56140.00 Suku Cadang Produksi,56140.00 Suku Cadang Produksi,56130.00 Bahan Pembantu Produksi
+,Lokasi Pemakaian - 56150.00 BBM & Pelumas Produksi,Virtual Locations,Inventory Loss,56150.00 BBM & Pelumas Produksi,56150.00 BBM & Pelumas Produksi,56140.00 Suku Cadang Produksi
+,Lokasi Pemakaian - 56160.00 Listrik,Virtual Locations,Inventory Loss,56160.00 Listrik,56160.00 Listrik,56150.00 BBM & Pelumas Produksi
+,Lokasi Pemakaian - 56170.00 Preventive Maintenance,Virtual Locations,Inventory Loss,56170.00 Preventive Maintenance,56170.00 Preventive Maintenance,56160.00 Listrik
+,Lokasi Pemakaian - 56180.00 Pembuatan Peralatan/Mesin,Virtual Locations,Inventory Loss,56180.00 Pembuatan Peralatan/Mesin,56180.00 Pembuatan Peralatan/Mesin,56170.00 Preventive Maintenance
+,Lokasi Pemakaian - 57100.00 Angkutan Log,Virtual Locations,Inventory Loss,57100.00 Angkutan Log,57100.00 Angkutan Log,56180.00 Pembuatan Peralatan/Mesin
+,Lokasi Pemakaian - 57200.00 Angkutan Veneer,Virtual Locations,Inventory Loss,57200.00 Angkutan Veneer,57200.00 Angkutan Veneer,57100.00 Angkutan Log
+,Lokasi Pemakaian - 57300.00 Pengeringan,Virtual Locations,Inventory Loss,57300.00 Pengeringan,57300.00 Pengeringan,57200.00 Angkutan Veneer
+,Lokasi Pemakaian - 57400.00 Lain-lain Produksi,Virtual Locations,Inventory Loss,57400.00 Lain-lain Produksi,57400.00 Lain-lain Produksi,57300.00 Pengeringan
+,Lokasi Pemakaian - 61110.00 Iklan & Advertising,Virtual Locations,Inventory Loss,61110.00 Iklan & Advertising,61110.00 Iklan & Advertising,57400.00 Lain-lain Produksi
+,Lokasi Pemakaian - 61120.00 Pengiriman Sampel,Virtual Locations,Inventory Loss,61120.00 Pengiriman Sampel,61120.00 Pengiriman Sampel,61110.00 Iklan & Advertising
+,Lokasi Pemakaian - 61130.00 Perjamuan & Presentasi Klien,Virtual Locations,Inventory Loss,61130.00 Perjamuan & Presentasi Klien,61130.00 Perjamuan & Presentasi Klien,61120.00 Pengiriman Sampel
+,Lokasi Pemakaian - 61140.00 Fee Marketing,Virtual Locations,Inventory Loss,61140.00 Fee Marketing,61140.00 Fee Marketing,61130.00 Perjamuan & Presentasi Klien
+,Lokasi Pemakaian - 61150.00 Biaya Loading,Virtual Locations,Inventory Loss,61150.00 Biaya Loading,61150.00 Biaya Loading,61140.00 Fee Marketing
+,Lokasi Pemakaian - 61201.00 Perawatan Kendaraan,Virtual Locations,Inventory Loss,61201.00 Perawatan Kendaraan,61201.00 Perawatan Kendaraan,61150.00 Biaya Loading
+,Lokasi Pemakaian - 61202.00 Perbaikan Kendaraan,Virtual Locations,Inventory Loss,61202.00 Perbaikan Kendaraan,61202.00 Perbaikan Kendaraan,61201.00 Perawatan Kendaraan
+,"Lokasi Pemakaian - 61203.00 Surat, Dokumen Kendaraan",Virtual Locations,Inventory Loss,"61203.00 Surat, Dokumen Kendaraan","61203.00 Surat, Dokumen Kendaraan",61202.00 Perbaikan Kendaraan
+,Lokasi Pemakaian - 61204.00 Denda Kendaraan,Virtual Locations,Inventory Loss,61204.00 Denda Kendaraan,61204.00 Denda Kendaraan,"61203.00 Surat, Dokumen Kendaraan"
+,Lokasi Pemakaian - 61290.00 Biaya Lain2 Kendaraan,Virtual Locations,Inventory Loss,61290.00 Biaya Lain2 Kendaraan,61290.00 Biaya Lain2 Kendaraan,61204.00 Denda Kendaraan
+,Lokasi Pemakaian - 61310.00 Fee Pencari Bhn Baku,Virtual Locations,Inventory Loss,61310.00 Fee Pencari Bhn Baku,61310.00 Fee Pencari Bhn Baku,61290.00 Biaya Lain2 Kendaraan
+,Lokasi Pemakaian - 61330.00 Fee Konsultan - Tanzil,Virtual Locations,Inventory Loss,61330.00 Fee Konsultan - Tanzil,61330.00 Fee Konsultan - Tanzil,61310.00 Fee Pencari Bhn Baku
+,Lokasi Pemakaian - 61331.00 Fee Konsultan - PT Citra,Virtual Locations,Inventory Loss,61331.00 Fee Konsultan - PT Citra,61331.00 Fee Konsultan - PT Citra,61330.00 Fee Konsultan - Tanzil
+,Lokasi Pemakaian - 61332.00 Fee Konsultan - Lainnya,Virtual Locations,Inventory Loss,61332.00 Fee Konsultan - Lainnya,61332.00 Fee Konsultan - Lainnya,61331.00 Fee Konsultan - PT Citra
+,Lokasi Pemakaian - 61390.00 Komisi & Fee Lainnya,Virtual Locations,Inventory Loss,61390.00 Komisi & Fee Lainnya,61390.00 Komisi & Fee Lainnya,61332.00 Fee Konsultan - Lainnya
+,Lokasi Pemakaian - 61501.00 Penyusutan Bangunan Produksi,Virtual Locations,Inventory Loss,61501.00 Penyusutan Bangunan Produksi,61501.00 Penyusutan Bangunan Produksi,61390.00 Komisi & Fee Lainnya
+,Lokasi Pemakaian - 61501.10 Penyusutan Bangunan Non Produksi,Virtual Locations,Inventory Loss,61501.10 Penyusutan Bangunan Non Produksi,61501.10 Penyusutan Bangunan Non Produksi,61501.00 Penyusutan Bangunan Produksi
+,Lokasi Pemakaian - 61502.00 Penyusutan Mesin Produksi,Virtual Locations,Inventory Loss,61502.00 Penyusutan Mesin Produksi,61502.00 Penyusutan Mesin Produksi,61501.10 Penyusutan Bangunan Non Produksi
+,Lokasi Pemakaian - 61503.00 Penyusutan Peralatan Produksi,Virtual Locations,Inventory Loss,61503.00 Penyusutan Peralatan Produksi,61503.00 Penyusutan Peralatan Produksi,61502.00 Penyusutan Mesin Produksi
+,Lokasi Pemakaian - 61504.00 Penyusutan Inventaris Kantor,Virtual Locations,Inventory Loss,61504.00 Penyusutan Inventaris Kantor,61504.00 Penyusutan Inventaris Kantor,61503.00 Penyusutan Peralatan Produksi
+,Lokasi Pemakaian - 61505.00 Penyusutan Kendaraan,Virtual Locations,Inventory Loss,61505.00 Penyusutan Kendaraan,61505.00 Penyusutan Kendaraan,61504.00 Penyusutan Inventaris Kantor
+,Lokasi Pemakaian - 61506.00 Penyusutan Alat Berat,Virtual Locations,Inventory Loss,61506.00 Penyusutan Alat Berat,61506.00 Penyusutan Alat Berat,61505.00 Penyusutan Kendaraan
+,Lokasi Pemakaian - 61507.00 Penyusutan Instalasi Listrik,Virtual Locations,Inventory Loss,61507.00 Penyusutan Instalasi Listrik,61507.00 Penyusutan Instalasi Listrik,61506.00 Penyusutan Alat Berat
+,Lokasi Pemakaian - 61508.00 Penyusutan Investasi Awal,Virtual Locations,Inventory Loss,61508.00 Penyusutan Investasi Awal,61508.00 Penyusutan Investasi Awal,61507.00 Penyusutan Instalasi Listrik
+,Lokasi Pemakaian - 61509.00 Penyusutan Investasi Biaya Lainnya,Virtual Locations,Inventory Loss,61509.00 Penyusutan Investasi Biaya Lainnya,61509.00 Penyusutan Investasi Biaya Lainnya,61508.00 Penyusutan Investasi Awal
+,Lokasi Pemakaian - 61510.00 Penyusutan Sewa Tanah & Bangunan,Virtual Locations,Inventory Loss,61510.00 Penyusutan Sewa Tanah & Bangunan,61510.00 Penyusutan Sewa Tanah & Bangunan,61509.00 Penyusutan Investasi Biaya Lainnya
+,Lokasi Pemakaian - 61511.00 Penyusutan SGU Kendaraan,Virtual Locations,Inventory Loss,61511.00 Penyusutan SGU Kendaraan,61511.00 Penyusutan SGU Kendaraan,61510.00 Penyusutan Sewa Tanah & Bangunan
+,Lokasi Pemakaian - 61610.00 Pemberian Discount,Virtual Locations,Inventory Loss,61610.00 Pemberian Discount,61610.00 Pemberian Discount,61511.00 Penyusutan SGU Kendaraan
+,Lokasi Pemakaian - 61620.00 Penerimaan Discount,Virtual Locations,Inventory Loss,61620.00 Penerimaan Discount,61620.00 Penerimaan Discount,61610.00 Pemberian Discount
+,Lokasi Pemakaian - 61710.00 Angkutan Pembelian Barang,Virtual Locations,Inventory Loss,61710.00 Angkutan Pembelian Barang,61710.00 Angkutan Pembelian Barang,61620.00 Penerimaan Discount
+,Lokasi Pemakaian - 61720.00 Angkutan Plywood,Virtual Locations,Inventory Loss,61720.00 Angkutan Plywood,61720.00 Angkutan Plywood,61710.00 Angkutan Pembelian Barang
+,Lokasi Pemakaian - 61721.00 Angkutan Pengiriman Veneer,Virtual Locations,Inventory Loss,61721.00 Angkutan Pengiriman Veneer,61721.00 Angkutan Pengiriman Veneer,61720.00 Angkutan Plywood
+,Lokasi Pemakaian - 61730.00 Fee Bongkar Barang,Virtual Locations,Inventory Loss,61730.00 Fee Bongkar Barang,61730.00 Fee Bongkar Barang,61721.00 Angkutan Pengiriman Veneer
+,Lokasi Pemakaian - 61731.00 Fee Muat Barang,Virtual Locations,Inventory Loss,61731.00 Fee Muat Barang,61731.00 Fee Muat Barang,61730.00 Fee Bongkar Barang
+,Lokasi Pemakaian - 61790.00 Angkutan Lainnya,Virtual Locations,Inventory Loss,61790.00 Angkutan Lainnya,61790.00 Angkutan Lainnya,61731.00 Fee Muat Barang
+,Lokasi Pemakaian - 61810.00 Asuransi Bangunan,Virtual Locations,Inventory Loss,61810.00 Asuransi Bangunan,61810.00 Asuransi Bangunan,61790.00 Angkutan Lainnya
+,Lokasi Pemakaian - 61820.00 Asuransi Mesin,Virtual Locations,Inventory Loss,61820.00 Asuransi Mesin,61820.00 Asuransi Mesin,61810.00 Asuransi Bangunan
+,Lokasi Pemakaian - 61830.00 Asuransi Kendaraan,Virtual Locations,Inventory Loss,61830.00 Asuransi Kendaraan,61830.00 Asuransi Kendaraan,61820.00 Asuransi Mesin
+,Lokasi Pemakaian - 61840.00 Asuransi Kesehatan,Virtual Locations,Inventory Loss,61840.00 Asuransi Kesehatan,61840.00 Asuransi Kesehatan,61830.00 Asuransi Kendaraan
+,Lokasi Pemakaian - 61910.00 Bunga Kendaraan/Alat Berat,Virtual Locations,Inventory Loss,61910.00 Bunga Kendaraan/Alat Berat,61910.00 Bunga Kendaraan/Alat Berat,61840.00 Asuransi Kesehatan
+,Lokasi Pemakaian - 61920.00 Bunga Mesin/Peralatan,Virtual Locations,Inventory Loss,61920.00 Bunga Mesin/Peralatan,61920.00 Bunga Mesin/Peralatan,61910.00 Bunga Kendaraan/Alat Berat
+,Lokasi Pemakaian - 61925.00 Bunga Pinjaman Bank,Virtual Locations,Inventory Loss,61925.00 Bunga Pinjaman Bank,61925.00 Bunga Pinjaman Bank,61920.00 Bunga Mesin/Peralatan
+,Lokasi Pemakaian - 61930.00 Bunga Pinjaman Lainnya,Virtual Locations,Inventory Loss,61930.00 Bunga Pinjaman Lainnya,61930.00 Bunga Pinjaman Lainnya,61925.00 Bunga Pinjaman Bank
+,Lokasi Pemakaian - 62010.00 Denda Pengiriman,Virtual Locations,Inventory Loss,62010.00 Denda Pengiriman,62010.00 Denda Pengiriman,61930.00 Bunga Pinjaman Lainnya
+,Lokasi Pemakaian - 62020.00 Denda Pajak,Virtual Locations,Inventory Loss,62020.00 Denda Pajak,62020.00 Denda Pajak,62010.00 Denda Pengiriman
+,Lokasi Pemakaian - 62030.00 Denda Lainnya,Virtual Locations,Inventory Loss,62030.00 Denda Lainnya,62030.00 Denda Lainnya,62020.00 Denda Pajak
+,Lokasi Pemakaian - 62110.00 Leasing Mesin & Peralatan,Virtual Locations,Inventory Loss,62110.00 Leasing Mesin & Peralatan,62110.00 Leasing Mesin & Peralatan,62030.00 Denda Lainnya
+,Lokasi Pemakaian - 62120.00 Leasing Kendaraan,Virtual Locations,Inventory Loss,62120.00 Leasing Kendaraan,62120.00 Leasing Kendaraan,62110.00 Leasing Mesin & Peralatan
+,Lokasi Pemakaian - 62130.00 Leasing Alat Berat,Virtual Locations,Inventory Loss,62130.00 Leasing Alat Berat,62130.00 Leasing Alat Berat,62120.00 Leasing Kendaraan
+,Lokasi Pemakaian - 62190.00 Leasing Lainnya,Virtual Locations,Inventory Loss,62190.00 Leasing Lainnya,62190.00 Leasing Lainnya,62130.00 Leasing Alat Berat
+,Lokasi Pemakaian - 62210.00 Dokumen Kehutanan,Virtual Locations,Inventory Loss,62210.00 Dokumen Kehutanan,62210.00 Dokumen Kehutanan,62190.00 Leasing Lainnya
+,Lokasi Pemakaian - 62220.00 Dokumen Export - Import,Virtual Locations,Inventory Loss,62220.00 Dokumen Export - Import,62220.00 Dokumen Export - Import,62210.00 Dokumen Kehutanan
+,Lokasi Pemakaian - 62230.00 Retribusi Daerah,Virtual Locations,Inventory Loss,62230.00 Retribusi Daerah,62230.00 Retribusi Daerah,62220.00 Dokumen Export - Import
+,Lokasi Pemakaian - 62240.00 Profesional Intansi terkait,Virtual Locations,Inventory Loss,62240.00 Profesional Intansi terkait,62240.00 Profesional Intansi terkait,62230.00 Retribusi Daerah
+,Lokasi Pemakaian - 62250.00 Pengurusan Perijinan,Virtual Locations,Inventory Loss,62250.00 Pengurusan Perijinan,62250.00 Pengurusan Perijinan,62240.00 Profesional Intansi terkait
+,Lokasi Pemakaian - 62290.00 Pengurusan Dokumen Lainnya,Virtual Locations,Inventory Loss,62290.00 Pengurusan Dokumen Lainnya,62290.00 Pengurusan Dokumen Lainnya,62250.00 Pengurusan Perijinan
+,Lokasi Pemakaian - 62301.00 Bhn Pembantu Non Produksi,Virtual Locations,Inventory Loss,62301.00 Bhn Pembantu Non Produksi,62301.00 Bhn Pembantu Non Produksi,62290.00 Pengurusan Dokumen Lainnya
+,Lokasi Pemakaian - 62302.00 Suku Cadang Non Produksi,Virtual Locations,Inventory Loss,62302.00 Suku Cadang Non Produksi,62302.00 Suku Cadang Non Produksi,62301.00 Bhn Pembantu Non Produksi
+,Lokasi Pemakaian - 62303.00 BBM & Pelumas Non Produksi,Virtual Locations,Inventory Loss,62303.00 BBM & Pelumas Non Produksi,62303.00 BBM & Pelumas Non Produksi,62302.00 Suku Cadang Non Produksi
+,Lokasi Pemakaian - 62304.00 Keamanan & Kebersihan,Virtual Locations,Inventory Loss,62304.00 Keamanan & Kebersihan,62304.00 Keamanan & Kebersihan,62303.00 BBM & Pelumas Non Produksi
+,"Lokasi Pemakaian - 62305.00 Pengiriman Dokumen, Surat2",Virtual Locations,Inventory Loss,"62305.00 Pengiriman Dokumen, Surat2","62305.00 Pengiriman Dokumen, Surat2",62304.00 Keamanan & Kebersihan
+,"Lokasi Pemakaian - 62306.00 Meterai, surat berharga",Virtual Locations,Inventory Loss,"62306.00 Meterai, surat berharga","62306.00 Meterai, surat berharga","62305.00 Pengiriman Dokumen, Surat2"
+,Lokasi Pemakaian - 62307.00 Foto Copy & Penjilidan,Virtual Locations,Inventory Loss,62307.00 Foto Copy & Penjilidan,62307.00 Foto Copy & Penjilidan,"62306.00 Meterai, surat berharga"
+,Lokasi Pemakaian - 62308.00 Barang Cetakan,Virtual Locations,Inventory Loss,62308.00 Barang Cetakan,62308.00 Barang Cetakan,62307.00 Foto Copy & Penjilidan
+,Lokasi Pemakaian - 62309.00 Alat Tulis Kantor,Virtual Locations,Inventory Loss,62309.00 Alat Tulis Kantor,62309.00 Alat Tulis Kantor,62308.00 Barang Cetakan
+,Lokasi Pemakaian - 62310.00 Perlengkapan Kantor,Virtual Locations,Inventory Loss,62310.00 Perlengkapan Kantor,62310.00 Perlengkapan Kantor,62309.00 Alat Tulis Kantor
+,Lokasi Pemakaian - 62311.00 Keperluan RT Kantor,Virtual Locations,Inventory Loss,62311.00 Keperluan RT Kantor,62311.00 Keperluan RT Kantor,62310.00 Perlengkapan Kantor
+,"Lokasi Pemakaian - 62312.00 Keperluan Mess, Dapur",Virtual Locations,Inventory Loss,"62312.00 Keperluan Mess, Dapur","62312.00 Keperluan Mess, Dapur",62311.00 Keperluan RT Kantor
+,Lokasi Pemakaian - 62313.00 Perjalanan Dinas,Virtual Locations,Inventory Loss,62313.00 Perjalanan Dinas,62313.00 Perjalanan Dinas,"62312.00 Keperluan Mess, Dapur"
+,Lokasi Pemakaian - 62314.00 Pendidikan & Pelatihan,Virtual Locations,Inventory Loss,62314.00 Pendidikan & Pelatihan,62314.00 Pendidikan & Pelatihan,62313.00 Perjalanan Dinas
+,"Lokasi Pemakaian - 62315.00 Transportasi, Parkir, Toll",Virtual Locations,Inventory Loss,"62315.00 Transportasi, Parkir, Toll","62315.00 Transportasi, Parkir, Toll",62314.00 Pendidikan & Pelatihan
+,"Lokasi Pemakaian - 62316.00 Surat Kabar, Majalah",Virtual Locations,Inventory Loss,"62316.00 Surat Kabar, Majalah","62316.00 Surat Kabar, Majalah","62315.00 Transportasi, Parkir, Toll"
+,Lokasi Pemakaian - 62317.00 Sewa Peralatan lainnya,Virtual Locations,Inventory Loss,62317.00 Sewa Peralatan lainnya,62317.00 Sewa Peralatan lainnya,"62316.00 Surat Kabar, Majalah"
+,"Lokasi Pemakaian - 62318.00 Administrasi Bank, Transfer",Virtual Locations,Inventory Loss,"62318.00 Administrasi Bank, Transfer","62318.00 Administrasi Bank, Transfer",62317.00 Sewa Peralatan lainnya
+,Lokasi Pemakaian - 62319.00 Sewa Kantor/Mess/Tanah,Virtual Locations,Inventory Loss,62319.00 Sewa Kantor/Mess/Tanah,62319.00 Sewa Kantor/Mess/Tanah,"62318.00 Administrasi Bank, Transfer"
+,Lokasi Pemakaian - 62320.00 Baju Seragam,Virtual Locations,Inventory Loss,62320.00 Baju Seragam,62320.00 Baju Seragam,62319.00 Sewa Kantor/Mess/Tanah
+,Lokasi Pemakaian - 62321.00 Papan/Pallet,Virtual Locations,Inventory Loss,62321.00 Papan/Pallet,62321.00 Papan/Pallet,62320.00 Baju Seragam
+,Lokasi Pemakaian - 62399.00 Biaya Kantor Lainnya,Virtual Locations,Inventory Loss,62399.00 Biaya Kantor Lainnya,62399.00 Biaya Kantor Lainnya,62321.00 Papan/Pallet
+,Lokasi Pemakaian - 62411.00 Kesejahteraan Staf/Karyawan,Virtual Locations,Inventory Loss,62411.00 Kesejahteraan Staf/Karyawan,62411.00 Kesejahteraan Staf/Karyawan,62399.00 Biaya Kantor Lainnya
+,Lokasi Pemakaian - 62412.00 Rekreasi,Virtual Locations,Inventory Loss,62412.00 Rekreasi,62412.00 Rekreasi,62411.00 Kesejahteraan Staf/Karyawan
+,"Lokasi Pemakaian - 62413.00 Makan, Natura Lainnya",Virtual Locations,Inventory Loss,"62413.00 Makan, Natura Lainnya","62413.00 Makan, Natura Lainnya",62412.00 Rekreasi
+,Lokasi Pemakaian - 62421.00 Tunjangan Transportasi,Virtual Locations,Inventory Loss,62421.00 Tunjangan Transportasi,62421.00 Tunjangan Transportasi,"62413.00 Makan, Natura Lainnya"
+,Lokasi Pemakaian - 62422.00 Tunjangan Kesehatan,Virtual Locations,Inventory Loss,62422.00 Tunjangan Kesehatan,62422.00 Tunjangan Kesehatan,62421.00 Tunjangan Transportasi
+,Lokasi Pemakaian - 62423.00 Tunjangan Perumahan,Virtual Locations,Inventory Loss,62423.00 Tunjangan Perumahan,62423.00 Tunjangan Perumahan,62422.00 Tunjangan Kesehatan
+,Lokasi Pemakaian - 62424.00 Tunjangan Lainnya,Virtual Locations,Inventory Loss,62424.00 Tunjangan Lainnya,62424.00 Tunjangan Lainnya,62423.00 Tunjangan Perumahan
+,Lokasi Pemakaian - 62431.00 Gaji Staf/kary. Bulanan,Virtual Locations,Inventory Loss,62431.00 Gaji Staf/kary. Bulanan,62431.00 Gaji Staf/kary. Bulanan,62424.00 Tunjangan Lainnya
+,Lokasi Pemakaian - 62432.00 PPh Psl 21,Virtual Locations,Inventory Loss,62432.00 PPh Psl 21,62432.00 PPh Psl 21,62431.00 Gaji Staf/kary. Bulanan
+,Lokasi Pemakaian - 62433.00 BPJS Staf,Virtual Locations,Inventory Loss,62433.00 BPJS Staf,62433.00 BPJS Staf,62432.00 PPh Psl 21
+,Lokasi Pemakaian - 62440.00 Lembur,Virtual Locations,Inventory Loss,62440.00 Lembur,62440.00 Lembur,62433.00 BPJS Staf
+,Lokasi Pemakaian - 62450.00 Insentif,Virtual Locations,Inventory Loss,62450.00 Insentif,62450.00 Insentif,62440.00 Lembur
+,Lokasi Pemakaian - 62460.00 Pengobatan,Virtual Locations,Inventory Loss,62460.00 Pengobatan,62460.00 Pengobatan,62450.00 Insentif
+,Lokasi Pemakaian - 62470.00 Upah Karyawan Keluar/PHK,Virtual Locations,Inventory Loss,62470.00 Upah Karyawan Keluar/PHK,62470.00 Upah Karyawan Keluar/PHK,62460.00 Pengobatan
+,"Lokasi Pemakaian - 62480.00 Cuti, THR, Bonus",Virtual Locations,Inventory Loss,"62480.00 Cuti, THR, Bonus","62480.00 Cuti, THR, Bonus",62470.00 Upah Karyawan Keluar/PHK
+,Lokasi Pemakaian - 62490.00 Upah Harian Non Produksi,Virtual Locations,Inventory Loss,62490.00 Upah Harian Non Produksi,62490.00 Upah Harian Non Produksi,"62480.00 Cuti, THR, Bonus"
+,Lokasi Pemakaian - 62491.00 Upah Borongan Non Produksi,Virtual Locations,Inventory Loss,62491.00 Upah Borongan Non Produksi,62491.00 Upah Borongan Non Produksi,62490.00 Upah Harian Non Produksi
+,Lokasi Pemakaian - 62510.00 Perawatan Inventaris,Virtual Locations,Inventory Loss,62510.00 Perawatan Inventaris,62510.00 Perawatan Inventaris,62491.00 Upah Borongan Non Produksi
+,Lokasi Pemakaian - 62520.00 Perbaikan Inventaris,Virtual Locations,Inventory Loss,62520.00 Perbaikan Inventaris,62520.00 Perbaikan Inventaris,62510.00 Perawatan Inventaris
+,Lokasi Pemakaian - 62521.00 Perawatan Gedung,Virtual Locations,Inventory Loss,62521.00 Perawatan Gedung,62521.00 Perawatan Gedung,62520.00 Perbaikan Inventaris
+,Lokasi Pemakaian - 62522.00 Perbaikan Gedung,Virtual Locations,Inventory Loss,62522.00 Perbaikan Gedung,62522.00 Perbaikan Gedung,62521.00 Perawatan Gedung
+,Lokasi Pemakaian - 62523.00 Pemel. & Perbaikan Lainnya,Virtual Locations,Inventory Loss,62523.00 Pemel. & Perbaikan Lainnya,62523.00 Pemel. & Perbaikan Lainnya,62522.00 Perbaikan Gedung
+,Lokasi Pemakaian - 62551.00 Pengurusan RUPL AMDAL,Virtual Locations,Inventory Loss,62551.00 Pengurusan RUPL AMDAL,62551.00 Pengurusan RUPL AMDAL,62523.00 Pemel. & Perbaikan Lainnya
+,Lokasi Pemakaian - 62552.00 Pembuatan Sarana Limbah,Virtual Locations,Inventory Loss,62552.00 Pembuatan Sarana Limbah,62552.00 Pembuatan Sarana Limbah,62551.00 Pengurusan RUPL AMDAL
+,Lokasi Pemakaian - 62553.00 Survey AMDAL Dinas Terkait,Virtual Locations,Inventory Loss,62553.00 Survey AMDAL Dinas Terkait,62553.00 Survey AMDAL Dinas Terkait,62552.00 Pembuatan Sarana Limbah
+,Lokasi Pemakaian - 62554.00 Biaya Limbah Lainnya,Virtual Locations,Inventory Loss,62554.00 Biaya Limbah Lainnya,62554.00 Biaya Limbah Lainnya,62553.00 Survey AMDAL Dinas Terkait
+,Lokasi Pemakaian - 62610.00 Sumbangan Suka Duka,Virtual Locations,Inventory Loss,62610.00 Sumbangan Suka Duka,62610.00 Sumbangan Suka Duka,62554.00 Biaya Limbah Lainnya
+,Lokasi Pemakaian - 62620.00 Sumbangan Umum,Virtual Locations,Inventory Loss,62620.00 Sumbangan Umum,62620.00 Sumbangan Umum,62610.00 Sumbangan Suka Duka
+,Lokasi Pemakaian - 62710.00 Pajak Bumi Bangunan/PBB,Virtual Locations,Inventory Loss,62710.00 Pajak Bumi Bangunan/PBB,62710.00 Pajak Bumi Bangunan/PBB,62620.00 Sumbangan Umum
+,Lokasi Pemakaian - 62720.00 PPh Pasal 22,Virtual Locations,Inventory Loss,62720.00 PPh Pasal 22,62720.00 PPh Pasal 22,62710.00 Pajak Bumi Bangunan/PBB
+,Lokasi Pemakaian - 62730.00 PPh Pasal 23,Virtual Locations,Inventory Loss,62730.00 PPh Pasal 23,62730.00 PPh Pasal 23,62720.00 PPh Pasal 22
+,Lokasi Pemakaian - 62740.00 PPh Pasal 25,Virtual Locations,Inventory Loss,62740.00 PPh Pasal 25,62740.00 PPh Pasal 25,62730.00 PPh Pasal 23
+,Lokasi Pemakaian - 62750.00 PPh Pasal 29,Virtual Locations,Inventory Loss,62750.00 PPh Pasal 29,62750.00 PPh Pasal 29,62740.00 PPh Pasal 25
+,Lokasi Pemakaian - 62751.00 PPh Pasal 4 Ayat 2,Virtual Locations,Inventory Loss,62751.00 PPh Pasal 4 Ayat 2,62751.00 PPh Pasal 4 Ayat 2,62750.00 PPh Pasal 29
+,Lokasi Pemakaian - 62760.00 Pajak Kurang Bayar,Virtual Locations,Inventory Loss,62760.00 Pajak Kurang Bayar,62760.00 Pajak Kurang Bayar,62751.00 PPh Pasal 4 Ayat 2
+,Lokasi Pemakaian - 62770.00 Pajak Lainnya,Virtual Locations,Inventory Loss,62770.00 Pajak Lainnya,62770.00 Pajak Lainnya,62760.00 Pajak Kurang Bayar
+,Lokasi Pemakaian - 62810.00 Telepon Kantor,Virtual Locations,Inventory Loss,62810.00 Telepon Kantor,62810.00 Telepon Kantor,62770.00 Pajak Lainnya
+,Lokasi Pemakaian - 62811.00 Telepon Mess,Virtual Locations,Inventory Loss,62811.00 Telepon Mess,62811.00 Telepon Mess,62810.00 Telepon Kantor
+,Lokasi Pemakaian - 62820.00 Faximile Kantor,Virtual Locations,Inventory Loss,62820.00 Faximile Kantor,62820.00 Faximile Kantor,62811.00 Telepon Mess
+,Lokasi Pemakaian - 62830.00 Pulsa HP Staf Kantor Pusat,Virtual Locations,Inventory Loss,62830.00 Pulsa HP Staf Kantor Pusat,62830.00 Pulsa HP Staf Kantor Pusat,62820.00 Faximile Kantor
+,Lokasi Pemakaian - 62832.00 Pulsa HP Kantor,Virtual Locations,Inventory Loss,62832.00 Pulsa HP Kantor,62832.00 Pulsa HP Kantor,62830.00 Pulsa HP Staf Kantor Pusat
+,Lokasi Pemakaian - 62833.00 Pulsa HP Staf Pabrik,Virtual Locations,Inventory Loss,62833.00 Pulsa HP Staf Pabrik,62833.00 Pulsa HP Staf Pabrik,62832.00 Pulsa HP Kantor
+,Lokasi Pemakaian - 62841.00 Internet - IM2,Virtual Locations,Inventory Loss,62841.00 Internet - IM2,62841.00 Internet - IM2,62833.00 Pulsa HP Staf Pabrik
+,Lokasi Pemakaian - 62842.00 Internet - Kantor Pabrik,Virtual Locations,Inventory Loss,62842.00 Internet - Kantor Pabrik,62842.00 Internet - Kantor Pabrik,62841.00 Internet - IM2
+,Lokasi Pemakaian - 62843.00 Internet - Kantor Pusat,Virtual Locations,Inventory Loss,62843.00 Internet - Kantor Pusat,62843.00 Internet - Kantor Pusat,62842.00 Internet - Kantor Pabrik
+,Lokasi Pemakaian - 62910.00 Gas,Virtual Locations,Inventory Loss,62910.00 Gas,62910.00 Gas,62843.00 Internet - Kantor Pusat
+,Lokasi Pemakaian - 62920.00 Listrik Non Produksi,Virtual Locations,Inventory Loss,62920.00 Listrik Non Produksi,62920.00 Listrik Non Produksi,62910.00 Gas
+,Lokasi Pemakaian - 62930.00 Air Bersih PAM,Virtual Locations,Inventory Loss,62930.00 Air Bersih PAM,62930.00 Air Bersih PAM,62920.00 Listrik Non Produksi
+,Lokasi Pemakaian - 63110.00 Hotel & Penginapan,Virtual Locations,Inventory Loss,63110.00 Hotel & Penginapan,63110.00 Hotel & Penginapan,62930.00 Air Bersih PAM
+,Lokasi Pemakaian - 63120.00 Perjamuan dgn Staf / Kary.,Virtual Locations,Inventory Loss,63120.00 Perjamuan dgn Staf / Kary.,63120.00 Perjamuan dgn Staf / Kary.,63110.00 Hotel & Penginapan
+,Lokasi Pemakaian - 63130.00 Entertainment Non Marketing,Virtual Locations,Inventory Loss,63130.00 Entertainment Non Marketing,63130.00 Entertainment Non Marketing,63120.00 Perjamuan dgn Staf / Kary.
+,Lokasi Pemakaian - 64111.00 Bhn Bangunan Semen,Virtual Locations,Inventory Loss,64111.00 Bhn Bangunan Semen,64111.00 Bhn Bangunan Semen,63130.00 Entertainment Non Marketing
+,Lokasi Pemakaian - 64112.00 Bhn Bang. Batu Bata/Batako,Virtual Locations,Inventory Loss,64112.00 Bhn Bang. Batu Bata/Batako,64112.00 Bhn Bang. Batu Bata/Batako,64111.00 Bhn Bangunan Semen
+,Lokasi Pemakaian - 64113.00 Bhn Bangunan Besi,Virtual Locations,Inventory Loss,64113.00 Bhn Bangunan Besi,64113.00 Bhn Bangunan Besi,64112.00 Bhn Bang. Batu Bata/Batako
+,Lokasi Pemakaian - 64119.00 Bhn Bangunan Lainnya,Virtual Locations,Inventory Loss,64119.00 Bhn Bangunan Lainnya,64119.00 Bhn Bangunan Lainnya,64113.00 Bhn Bangunan Besi
+,Lokasi Pemakaian - 64121.00 Bhn Galian Pasir,Virtual Locations,Inventory Loss,64121.00 Bhn Galian Pasir,64121.00 Bhn Galian Pasir,64119.00 Bhn Bangunan Lainnya
+,Lokasi Pemakaian - 64122.00 Bhn Galian Batu,Virtual Locations,Inventory Loss,64122.00 Bhn Galian Batu,64122.00 Bhn Galian Batu,64121.00 Bhn Galian Pasir
+,Lokasi Pemakaian - 64123.00 Bhn Galian Tanah,Virtual Locations,Inventory Loss,64123.00 Bhn Galian Tanah,64123.00 Bhn Galian Tanah,64122.00 Bhn Galian Batu
+,Lokasi Pemakaian - 64129.00 Bahan Timbunan Lainnya,Virtual Locations,Inventory Loss,64129.00 Bahan Timbunan Lainnya,64129.00 Bahan Timbunan Lainnya,64123.00 Bhn Galian Tanah
+,"Lokasi Pemakaian - 64130.00 Pembuatan Jalan, Uruk Tanah",Virtual Locations,Inventory Loss,"64130.00 Pembuatan Jalan, Uruk Tanah","64130.00 Pembuatan Jalan, Uruk Tanah",64129.00 Bahan Timbunan Lainnya
+,Lokasi Pemakaian - 64140.00 Perombakan,Virtual Locations,Inventory Loss,64140.00 Perombakan,64140.00 Perombakan,"64130.00 Pembuatan Jalan, Uruk Tanah"
+,Lokasi Pemakaian - 65110.00 Perjln Dinas Direksi & Kom.,Virtual Locations,Inventory Loss,65110.00 Perjln Dinas Direksi & Kom.,65110.00 Perjln Dinas Direksi & Kom.,64140.00 Perombakan
+,Lokasi Pemakaian - 65120.00 Operasional Direksi & Kom.,Virtual Locations,Inventory Loss,65120.00 Operasional Direksi & Kom.,65120.00 Operasional Direksi & Kom.,65110.00 Perjln Dinas Direksi & Kom.
+,Lokasi Pemakaian - 65121.00 Bunga Share Holder,Virtual Locations,Inventory Loss,65121.00 Bunga Share Holder,65121.00 Bunga Share Holder,65120.00 Operasional Direksi & Kom.
+,Lokasi Pemakaian - 65122.00 Penarikan Share Holder,Virtual Locations,Inventory Loss,65122.00 Penarikan Share Holder,65122.00 Penarikan Share Holder,65121.00 Bunga Share Holder
+,Lokasi Pemakaian - 65130.00 Lain-lain Direksi & Kom.,Virtual Locations,Inventory Loss,65130.00 Lain-lain Direksi & Kom.,65130.00 Lain-lain Direksi & Kom.,65122.00 Penarikan Share Holder
+,Lokasi Pemakaian - 65140.00 Lain-lain GM,Virtual Locations,Inventory Loss,65140.00 Lain-lain GM,65140.00 Lain-lain GM,65130.00 Lain-lain Direksi & Kom.
+,Lokasi Pemakaian - 66110.00 Pembelian Bibit,Virtual Locations,Inventory Loss,66110.00 Pembelian Bibit,66110.00 Pembelian Bibit,65140.00 Lain-lain GM
+,Lokasi Pemakaian - 66120.00 Pnylngrn Penghij. & Reboisasi,Virtual Locations,Inventory Loss,66120.00 Pnylngrn Penghij. & Reboisasi,66120.00 Pnylngrn Penghij. & Reboisasi,66110.00 Pembelian Bibit
+,Lokasi Pemakaian - 66226.00 Perjalanan Dinas Perijinan,Virtual Locations,Inventory Loss,66226.00 Perjalanan Dinas Perijinan,66226.00 Perjalanan Dinas Perijinan,66120.00 Pnylngrn Penghij. & Reboisasi
+,Lokasi Pemakaian - 67100.00 Biaya PT Berkat Bersama Mandiri,Virtual Locations,Inventory Loss,67100.00 Biaya PT Berkat Bersama Mandiri,67100.00 Biaya PT Berkat Bersama Mandiri,66226.00 Perjalanan Dinas Perijinan
+,Lokasi Pemakaian - 68100.00 Biaya PT Harapan Mandiri Jaya,Virtual Locations,Inventory Loss,68100.00 Biaya PT Harapan Mandiri Jaya,68100.00 Biaya PT Harapan Mandiri Jaya,67100.00 Biaya PT Berkat Bersama Mandiri
+,Lokasi Pemakaian - 81100.00 Bunga Tabungan,Virtual Locations,Inventory Loss,81100.00 Bunga Tabungan,81100.00 Bunga Tabungan,68100.00 Biaya PT Harapan Mandiri Jaya
+,Lokasi Pemakaian - 81200.00 Jasa Giro BCA - IDR,Virtual Locations,Inventory Loss,81200.00 Jasa Giro BCA - IDR,81200.00 Jasa Giro BCA - IDR,81100.00 Bunga Tabungan
+,Lokasi Pemakaian - 81300.00 Jasa Giro BCA - USD,Virtual Locations,Inventory Loss,81300.00 Jasa Giro BCA - USD,81300.00 Jasa Giro BCA - USD,81200.00 Jasa Giro BCA - IDR
+,Lokasi Pemakaian - 81400.00 Jasa Giro MANDIRI - IDR,Virtual Locations,Inventory Loss,81400.00 Jasa Giro MANDIRI - IDR,81400.00 Jasa Giro MANDIRI - IDR,81300.00 Jasa Giro BCA - USD
+,Lokasi Pemakaian - 81500.00 Jasa Giro MANDIRI - USD,Virtual Locations,Inventory Loss,81500.00 Jasa Giro MANDIRI - USD,81500.00 Jasa Giro MANDIRI - USD,81400.00 Jasa Giro MANDIRI - IDR
+,Lokasi Pemakaian - 81600.00 Jasa Giro BPD PAPUA - IDR,Virtual Locations,Inventory Loss,81600.00 Jasa Giro BPD PAPUA - IDR,81600.00 Jasa Giro BPD PAPUA - IDR,81500.00 Jasa Giro MANDIRI - USD
+,Lokasi Pemakaian - 81700.00 Jasa Giro BPD PAPUA - USD,Virtual Locations,Inventory Loss,81700.00 Jasa Giro BPD PAPUA - USD,81700.00 Jasa Giro BPD PAPUA - USD,81600.00 Jasa Giro BPD PAPUA - IDR
+,Lokasi Pemakaian - 81800.00 Jasa Giro BRI - IDR,Virtual Locations,Inventory Loss,81800.00 Jasa Giro BRI - IDR,81800.00 Jasa Giro BRI - IDR,81700.00 Jasa Giro BPD PAPUA - USD
+,Lokasi Pemakaian - 81900.00 Jasa Giro BRI - USD,Virtual Locations,Inventory Loss,81900.00 Jasa Giro BRI - USD,81900.00 Jasa Giro BRI - USD,81800.00 Jasa Giro BRI - IDR
+,Lokasi Pemakaian - 81901.00 Jasa Giro CIMB NIAGA - IDR,Virtual Locations,Inventory Loss,81901.00 Jasa Giro CIMB NIAGA - IDR,81901.00 Jasa Giro CIMB NIAGA - IDR,81900.00 Jasa Giro BRI - USD
+,Lokasi Pemakaian - 81902.00 Jasa Giro CIMB NIAGA - USD,Virtual Locations,Inventory Loss,81902.00 Jasa Giro CIMB NIAGA - USD,81902.00 Jasa Giro CIMB NIAGA - USD,81901.00 Jasa Giro CIMB NIAGA - IDR
+,Lokasi Pemakaian - 81903.00 Jasa Giro BANK JATIM - IDR,Virtual Locations,Inventory Loss,81903.00 Jasa Giro BANK JATIM - IDR,81903.00 Jasa Giro BANK JATIM - IDR,81902.00 Jasa Giro CIMB NIAGA - USD
+,Lokasi Pemakaian - 81904.00 Jasa Giro BANK JATIM - USD,Virtual Locations,Inventory Loss,81904.00 Jasa Giro BANK JATIM - USD,81904.00 Jasa Giro BANK JATIM - USD,81903.00 Jasa Giro BANK JATIM - IDR
+,Lokasi Pemakaian - 82100.00 Selisih Kurs,Virtual Locations,Inventory Loss,82100.00 Selisih Kurs,82100.00 Selisih Kurs,81904.00 Jasa Giro BANK JATIM - USD
+,Lokasi Pemakaian - 82200.00 Pendapatan Bunga,Virtual Locations,Inventory Loss,82200.00 Pendapatan Bunga,82200.00 Pendapatan Bunga,82100.00 Selisih Kurs
+,Lokasi Pemakaian - 83100.00 Penjualan Mesin,Virtual Locations,Inventory Loss,83100.00 Penjualan Mesin,83100.00 Penjualan Mesin,82200.00 Pendapatan Bunga
+,Lokasi Pemakaian - 83200.00 Penjualan Peralatan,Virtual Locations,Inventory Loss,83200.00 Penjualan Peralatan,83200.00 Penjualan Peralatan,83100.00 Penjualan Mesin
+,Lokasi Pemakaian - 83300.00 Penjualan Kendaraan,Virtual Locations,Inventory Loss,83300.00 Penjualan Kendaraan,83300.00 Penjualan Kendaraan,83200.00 Penjualan Peralatan
+,Lokasi Pemakaian - 83400.00 Penjualan Inventaris Kntr,Virtual Locations,Inventory Loss,83400.00 Penjualan Inventaris Kntr,83400.00 Penjualan Inventaris Kntr,83300.00 Penjualan Kendaraan
+,Lokasi Pemakaian - 83500.00 Penjualan Alat Berat,Virtual Locations,Inventory Loss,83500.00 Penjualan Alat Berat,83500.00 Penjualan Alat Berat,83400.00 Penjualan Inventaris Kntr
+,Lokasi Pemakaian - 83600.00 Penjualan Bangunan,Virtual Locations,Inventory Loss,83600.00 Penjualan Bangunan,83600.00 Penjualan Bangunan,83500.00 Penjualan Alat Berat
+,Lokasi Pemakaian - 84100.00 Penjualan Bahan Pembantu,Virtual Locations,Inventory Loss,84100.00 Penjualan Bahan Pembantu,84100.00 Penjualan Bahan Pembantu,83600.00 Penjualan Bangunan
+,Lokasi Pemakaian - 84200.00 Penjualan Bahan Glue,Virtual Locations,Inventory Loss,84200.00 Penjualan Bahan Glue,84200.00 Penjualan Bahan Glue,84100.00 Penjualan Bahan Pembantu
+,Lokasi Pemakaian - 84300.00 Penjualan Bahan Baku,Virtual Locations,Inventory Loss,84300.00 Penjualan Bahan Baku,84300.00 Penjualan Bahan Baku,84200.00 Penjualan Bahan Glue
+,Lokasi Pemakaian - 84400.00 Penjualan Suku Cadang,Virtual Locations,Inventory Loss,84400.00 Penjualan Suku Cadang,84400.00 Penjualan Suku Cadang,84300.00 Penjualan Bahan Baku
+,Lokasi Pemakaian - 84500.00 Pendapatan Lain-lain,Virtual Locations,Inventory Loss,84500.00 Pendapatan Lain-lain,84500.00 Pendapatan Lain-lain,84400.00 Penjualan Suku Cadang
+,Lokasi Pemakaian - 91110.00 Adm Bank BCA - IDR,Virtual Locations,Inventory Loss,91110.00 Adm Bank BCA - IDR,91110.00 Adm Bank BCA - IDR,84500.00 Pendapatan Lain-lain
+,Lokasi Pemakaian - 91120.00 Adm Bank BCA - USD,Virtual Locations,Inventory Loss,91120.00 Adm Bank BCA - USD,91120.00 Adm Bank BCA - USD,91110.00 Adm Bank BCA - IDR
+,Lokasi Pemakaian - 91130.00 Adm Bank MANDIRI - IDR,Virtual Locations,Inventory Loss,91130.00 Adm Bank MANDIRI - IDR,91130.00 Adm Bank MANDIRI - IDR,91120.00 Adm Bank BCA - USD
+,Lokasi Pemakaian - 91140.00 Adm Bank MANDIRI - USD,Virtual Locations,Inventory Loss,91140.00 Adm Bank MANDIRI - USD,91140.00 Adm Bank MANDIRI - USD,91130.00 Adm Bank MANDIRI - IDR
+,Lokasi Pemakaian - 91150.00 Adm Bank BPD PAPUA - IDR,Virtual Locations,Inventory Loss,91150.00 Adm Bank BPD PAPUA - IDR,91150.00 Adm Bank BPD PAPUA - IDR,91140.00 Adm Bank MANDIRI - USD
+,Lokasi Pemakaian - 91160.00 Adm Bank BPD PAPUA - USD,Virtual Locations,Inventory Loss,91160.00 Adm Bank BPD PAPUA - USD,91160.00 Adm Bank BPD PAPUA - USD,91150.00 Adm Bank BPD PAPUA - IDR
+,Lokasi Pemakaian - 91170.00 Adm Bank BRI - IDR,Virtual Locations,Inventory Loss,91170.00 Adm Bank BRI - IDR,91170.00 Adm Bank BRI - IDR,91160.00 Adm Bank BPD PAPUA - USD
+,Lokasi Pemakaian - 91180.00 Adm Bank BRI - USD,Virtual Locations,Inventory Loss,91180.00 Adm Bank BRI - USD,91180.00 Adm Bank BRI - USD,91170.00 Adm Bank BRI - IDR
+,Lokasi Pemakaian - 91181.00 Adm Bank CIMB NIAGA - IDR,Virtual Locations,Inventory Loss,91181.00 Adm Bank CIMB NIAGA - IDR,91181.00 Adm Bank CIMB NIAGA - IDR,91180.00 Adm Bank BRI - USD
+,Lokasi Pemakaian - 91182.00 Adm Bank CIMB NIAGA - USD,Virtual Locations,Inventory Loss,91182.00 Adm Bank CIMB NIAGA - USD,91182.00 Adm Bank CIMB NIAGA - USD,91181.00 Adm Bank CIMB NIAGA - IDR
+,Lokasi Pemakaian - 91183.00 Adm Bank JATIM - IDR,Virtual Locations,Inventory Loss,91183.00 Adm Bank JATIM - IDR,91183.00 Adm Bank JATIM - IDR,91182.00 Adm Bank CIMB NIAGA - USD
+,Lokasi Pemakaian - 91184.00 Adm Bank JATIM - USD,Virtual Locations,Inventory Loss,91184.00 Adm Bank JATIM - USD,91184.00 Adm Bank JATIM - USD,91183.00 Adm Bank JATIM - IDR
+,Lokasi Pemakaian - 91185.00 Adm Bank DANAMON - IDR,Virtual Locations,Inventory Loss,91185.00 Adm Bank DANAMON - IDR,91185.00 Adm Bank DANAMON - IDR,91184.00 Adm Bank JATIM - USD
+,Lokasi Pemakaian - 91210.00 Pajak Bank BCA - IDR,Virtual Locations,Inventory Loss,91210.00 Pajak Bank BCA - IDR,91210.00 Pajak Bank BCA - IDR,91185.00 Adm Bank DANAMON - IDR
+,Lokasi Pemakaian - 91220.00 Pajak Bank BCA - USD,Virtual Locations,Inventory Loss,91220.00 Pajak Bank BCA - USD,91220.00 Pajak Bank BCA - USD,91210.00 Pajak Bank BCA - IDR
+,Lokasi Pemakaian - 91230.00 Pajak Bank MANDIRI - IDR,Virtual Locations,Inventory Loss,91230.00 Pajak Bank MANDIRI - IDR,91230.00 Pajak Bank MANDIRI - IDR,91220.00 Pajak Bank BCA - USD
+,Lokasi Pemakaian - 91240.00 Pajak Bank MANDIRI - USD,Virtual Locations,Inventory Loss,91240.00 Pajak Bank MANDIRI - USD,91240.00 Pajak Bank MANDIRI - USD,91230.00 Pajak Bank MANDIRI - IDR
+,Lokasi Pemakaian - 91250.00 Pajak Bank BPD PAPUA - IDR,Virtual Locations,Inventory Loss,91250.00 Pajak Bank BPD PAPUA - IDR,91250.00 Pajak Bank BPD PAPUA - IDR,91240.00 Pajak Bank MANDIRI - USD
+,Lokasi Pemakaian - 91260.00 Pajak Bank BPD PAPUA - USD,Virtual Locations,Inventory Loss,91260.00 Pajak Bank BPD PAPUA - USD,91260.00 Pajak Bank BPD PAPUA - USD,91250.00 Pajak Bank BPD PAPUA - IDR
+,Lokasi Pemakaian - 91270.00 Pajak Bank BRI - IDR,Virtual Locations,Inventory Loss,91270.00 Pajak Bank BRI - IDR,91270.00 Pajak Bank BRI - IDR,91260.00 Pajak Bank BPD PAPUA - USD
+,Lokasi Pemakaian - 91280.00 Pajak Bank BRI - USD,Virtual Locations,Inventory Loss,91280.00 Pajak Bank BRI - USD,91280.00 Pajak Bank BRI - USD,91270.00 Pajak Bank BRI - IDR
+,Lokasi Pemakaian - 91281.00 Pajak Bank CIMB NIAGA - IDR,Virtual Locations,Inventory Loss,91281.00 Pajak Bank CIMB NIAGA - IDR,91281.00 Pajak Bank CIMB NIAGA - IDR,91280.00 Pajak Bank BRI - USD
+,Lokasi Pemakaian - 91282.00 Pajak Bank CIMB NIAGA - USD,Virtual Locations,Inventory Loss,91282.00 Pajak Bank CIMB NIAGA - USD,91282.00 Pajak Bank CIMB NIAGA - USD,91281.00 Pajak Bank CIMB NIAGA - IDR
+,Lokasi Pemakaian - 91283.00 Pajak Bank JATIM - IDR,Virtual Locations,Inventory Loss,91283.00 Pajak Bank JATIM - IDR,91283.00 Pajak Bank JATIM - IDR,91282.00 Pajak Bank CIMB NIAGA - USD
+,Lokasi Pemakaian - 91284.00 Pajak Bank JATIM - USD,Virtual Locations,Inventory Loss,91284.00 Pajak Bank JATIM - USD,91284.00 Pajak Bank JATIM - USD,91283.00 Pajak Bank JATIM - IDR
+,Lokasi Pemakaian - 91285.00 Pajak Bank DANAMON - IDR,Virtual Locations,Inventory Loss,91285.00 Pajak Bank DANAMON - IDR,91285.00 Pajak Bank DANAMON - IDR,91284.00 Pajak Bank JATIM - USD
+,Lokasi Pemakaian - 92100.00 Pajak Penjualan Plywood,Virtual Locations,Inventory Loss,92100.00 Pajak Penjualan Plywood,92100.00 Pajak Penjualan Plywood,91285.00 Pajak Bank DANAMON - IDR
+,Lokasi Pemakaian - 92200.00 Pajak Penjualan Block Board,Virtual Locations,Inventory Loss,92200.00 Pajak Penjualan Block Board,92200.00 Pajak Penjualan Block Board,92100.00 Pajak Penjualan Plywood
+,Lokasi Pemakaian - 92300.00 Pajak Penjualan Veneer,Virtual Locations,Inventory Loss,92300.00 Pajak Penjualan Veneer,92300.00 Pajak Penjualan Veneer,92200.00 Pajak Penjualan Block Board
+,Lokasi Pemakaian - 92400.00 Pajak Penjualan Lain-lain,Virtual Locations,Inventory Loss,92400.00 Pajak Penjualan Lain-lain,92400.00 Pajak Penjualan Lain-lain,92300.00 Pajak Penjualan Veneer
+,Lokasi Pemakaian - 93100.00 Selisih Pembulatan,Virtual Locations,Inventory Loss,93100.00 Selisih Pembulatan,93100.00 Selisih Pembulatan,92400.00 Pajak Penjualan Lain-lain
+,Lokasi Pemakaian - 93200.00 Kurs Kurang Penjualan,Virtual Locations,Inventory Loss,93200.00 Kurs Kurang Penjualan,93200.00 Kurs Kurang Penjualan,93100.00 Selisih Pembulatan
+,Lokasi Pemakaian - 94100.00 Penjualan Mesin - Rugi,Virtual Locations,Inventory Loss,94100.00 Penjualan Mesin - Rugi,94100.00 Penjualan Mesin - Rugi,93200.00 Kurs Kurang Penjualan
+,Lokasi Pemakaian - 94200.00 Penjualan Peralatan - Rugi,Virtual Locations,Inventory Loss,94200.00 Penjualan Peralatan - Rugi,94200.00 Penjualan Peralatan - Rugi,94100.00 Penjualan Mesin - Rugi
+,Lokasi Pemakaian - 94300.00 Penjualan Kendaraan - Rugi,Virtual Locations,Inventory Loss,94300.00 Penjualan Kendaraan - Rugi,94300.00 Penjualan Kendaraan - Rugi,94200.00 Penjualan Peralatan - Rugi
+,Lokasi Pemakaian - 94400.00 Penj. Inv. Kantor - Rugi,Virtual Locations,Inventory Loss,94400.00 Penj. Inv. Kantor - Rugi,94400.00 Penj. Inv. Kantor - Rugi,94300.00 Penjualan Kendaraan - Rugi
+,Lokasi Pemakaian - 94500.00 Penj. Alat Berat - Rugi,Virtual Locations,Inventory Loss,94500.00 Penj. Alat Berat - Rugi,94500.00 Penj. Alat Berat - Rugi,94400.00 Penj. Inv. Kantor - Rugi
+,Lokasi Pemakaian - 94600.00 Penjualan Bangunan - Rugi,Virtual Locations,Inventory Loss,94600.00 Penjualan Bangunan - Rugi,94600.00 Penjualan Bangunan - Rugi,94500.00 Penj. Alat Berat - Rugi
+,Lokasi Pemakaian - 95100.00 Penj. Bhn Pembantu - Rugi,Virtual Locations,Inventory Loss,95100.00 Penj. Bhn Pembantu - Rugi,95100.00 Penj. Bhn Pembantu - Rugi,94600.00 Penjualan Bangunan - Rugi
+,Lokasi Pemakaian - 95200.00 Penj. Bahan Glue - Rugi,Virtual Locations,Inventory Loss,95200.00 Penj. Bahan Glue - Rugi,95200.00 Penj. Bahan Glue - Rugi,95100.00 Penj. Bhn Pembantu - Rugi
+,Lokasi Pemakaian - 95300.00 Penj. Bahan Baku - Rugi,Virtual Locations,Inventory Loss,95300.00 Penj. Bahan Baku - Rugi,95300.00 Penj. Bahan Baku - Rugi,95200.00 Penj. Bahan Glue - Rugi
+,Lokasi Pemakaian - 95400.00 Penj. Suku Cadang - Rugi,Virtual Locations,Inventory Loss,95400.00 Penj. Suku Cadang - Rugi,95400.00 Penj. Suku Cadang - Rugi,95300.00 Penj. Bahan Baku - Rugi
+,Lokasi Pemakaian - 95500.00 Penj. Lain-lain - Rugi,Virtual Locations,Inventory Loss,95500.00 Penj. Lain-lain - Rugi,95500.00 Penj. Lain-lain - Rugi,95400.00 Penj. Suku Cadang - Rugi
+,Lokasi Pemakaian - 96100.00 Amortisasi Biaya Tangguhan,Virtual Locations,Inventory Loss,96100.00 Amortisasi Biaya Tangguhan,96100.00 Amortisasi Biaya Tangguhan,95500.00 Penj. Lain-lain - Rugi
+,Lokasi Pemakaian - 96200.00 Amortisasi Biaya Lainnya,Virtual Locations,Inventory Loss,96200.00 Amortisasi Biaya Lainnya,96200.00 Amortisasi Biaya Lainnya,96100.00 Amortisasi Biaya Tangguhan
+,Lokasi Pemakaian - 96399.00 Kerugian Biaya Lainnya,Virtual Locations,Inventory Loss,96399.00 Kerugian Biaya Lainnya,96399.00 Kerugian Biaya Lainnya,96200.00 Amortisasi Biaya Lainnya
+,,,,,,96399.00 Kerugian Biaya Lainnya

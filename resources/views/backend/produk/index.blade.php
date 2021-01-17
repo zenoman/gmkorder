@@ -35,7 +35,7 @@
                         <div class="card-header">
                             <h3 class="card-title">List Data Produk</h3>
                             <div class="card-tools">
-                                <a href="{{url('backend/produk/create')}}">
+                                <a href="{{url('backend/import-export/produk')}}">
                                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-file-excel"></i>
                                         Import / Export
                                     </button>
