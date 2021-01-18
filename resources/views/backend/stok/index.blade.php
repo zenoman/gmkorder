@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0 text-dark"> Pengguna</h1>
+                    <h1 class="m-0 text-dark"> Penyesuaian Stok</h1>
                 </div>
             </div>
         </div>
@@ -33,12 +33,17 @@
                     @endif
                     <div class="card card-dark">
                         <div class="card-header">
-                            <h3 class="card-title">List Data Pengguna</h3>
+                            <h3 class="card-title">List Data Log Stok</h3>
                             <div class="card-tools">
-                                <a href="{{url('backend/pengguna/create')}}">
+                                <a href="{{url('backend/penyesuaian-stok/import-export')}}">
+                                    <button type="button" class="btn btn-default btn-sm"><i
+                                            class="fas fa-file-excel"></i>
+                                        Import / Export Excel
+                                    </button>
+                                </a>
+                                <a href="{{url('backend/penyesuaian-stok/create')}}">
                                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-plus"></i>
-                                        Tambah
-                                        Data
+                                        Edit Stok Produk
                                     </button>
                                 </a>
                             </div>
@@ -49,11 +54,13 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Email</th>
-                                            <th class="text-center">Aksi</th>
+                                            <th>Admin</th>
+                                            <th>Produk</th>
+                                            <th>Aksi</th>
+                                            <th>Deskripsi</th>
+                                            <th class="text-right">jumlah (Pcs)</th>
+                                            <th class="text-right">jumlah Akhir (Pcs)</th>
+                                            <th>Tanggal</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -62,11 +69,13 @@
                                     <tfoot>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Telp</th>
-                                            <th>Email</th>
-                                            <th class="text-center">Aksi</th>
+                                            <th>Admin</th>
+                                            <th>Produk</th>
+                                            <th>Aksi</th>
+                                            <th>Deskripsi</th>
+                                            <th class="text-right">jumlah (Pcs)</th>
+                                            <th class="text-right">jumlah Akhir (Pcs)</th>
+                                            <th>Tanggal</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -86,5 +95,5 @@
 <script src="{{asset('assets/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 @endpush
 @push('customscripts')
-<script src="{{asset('customjs/backend/pengguna.js')}}"></script> datatable plugin
+<script src="{{asset('customjs/backend/view_penyesuaian_stok.js')}}"></script>
 @endpush

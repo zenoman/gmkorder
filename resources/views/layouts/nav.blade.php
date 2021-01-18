@@ -25,6 +25,7 @@
                         <li class="dropdown-divider"></li>
                         <li><a href="{{url('backend/kategori-produk')}}" class="dropdown-item">Kategori Produk</a></li>
                         <li><a href="{{url('backend/produk')}}" class="dropdown-item">Produk</a></li>
+                        <li><a href="{{url('backend/penyesuaian-stok')}}" class="dropdown-item">Penyesuaian Stok</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

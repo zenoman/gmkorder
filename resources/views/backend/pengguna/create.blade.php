@@ -80,10 +80,10 @@
 </div>
 @endsection
 
-@section('customjs')
+@push('customjs')
 <script src="{{asset('assets/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
-@endsection
+@endpush
 
-@section('customscripts')
+@push('customscripts')
 <script src="{{asset('customjs/backend/admin_input.js')}}"></script>
-@endsection
+@endpush

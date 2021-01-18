@@ -87,12 +87,12 @@
 </div>
 @endsection
 
-@section('customjs')
+@push('customjs')
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script src="{{asset('assets/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
-@endsection
+@endpush
 
-@section('customscripts')
+@push('customscripts')
 <script src="{{asset('customjs/backend/produk.js')}}"></script>
-@endsection
+@endpush

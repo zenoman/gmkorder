@@ -33,8 +33,8 @@
 </div>
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-@yield('customjs')
+@stack('customjs')
 <script src="{{asset('assets/dist/js/adminlte.js')}}"></script>
-@yield('customscripts')
+@stack('customscripts')
 </body>
 </html>

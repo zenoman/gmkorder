@@ -118,7 +118,7 @@
     </div>
 </div>
 @endsection
-@section('customscripts')
+@push('customscripts')
 <script>
 $("#gambarlain").on("change", function() {
     if ($("#gambarlain")[0].files.length > 9) {
@@ -127,4 +127,4 @@ $("#gambarlain").on("change", function() {
     }
 });
 </script>
-@endsection
+@endpush
