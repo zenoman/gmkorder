@@ -46,12 +46,16 @@ Route::prefix('backend')->group(function(){
     Route::post('/produk/add-gambar-produk','backend\ProdukController@addgambar');
     Route::delete('/produk/hapus-gambar/{id}','backend\ProdukController@hapusgambar');
 
-    //penyesuaian stok
+    //penyesuaian stok 
     Route::get('/data-log-stok','backend\PenyesuaianStokController@listdata');
     Route::get('/penyesuaian-stok/import-export','backend\PenyesuaianStokController@importexport');
     Route::get('/penyesuaian-stok/export','backend\PenyesuaianStokController@export');
     Route::post('/penyesuaian-stok/produk/export','backend\PenyesuaianStokController@import');
     Route::get('/penyesuaian-stok/cari-detail-barang/{id}','backend\PenyesuaianStokController@detailbarang');
     Route::resource('/penyesuaian-stok','backend\PenyesuaianStokController');
+
+
+    Route::resource('/slider','backend\SliderController');
+    Route::resource('/setting-web','backend\SettingwebController');
     
 });

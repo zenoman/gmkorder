@@ -26,8 +26,9 @@
   
   <aside class="control-sidebar control-sidebar-dark" style="height:100%;">
     <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
+      <h5>Menu Lainnya</h5>
+      <a href="{{url('backend/slider')}}" class="mt-3"><i class="fa fa-image"></i> Slider</a><br>
+      <a href="{{url('backend/setting-web')}}" class="mt-3"><i class="fa fa-cog"></i> Setting Web</a>
     </div>
   </aside>
 </div>
