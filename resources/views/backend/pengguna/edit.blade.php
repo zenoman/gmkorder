@@ -29,52 +29,76 @@
                             @csrf
                             <input type="hidden" name="_method" value="PUT">
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama</label>
-                                    <input type="text" class="form-control" name="nama" value="{{$row->nama}}"
-                                        required autofocus>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Nama</label>
+                                            <input type="text" class="form-control" name="nama" value="{{$row->nama}}"
+                                                required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Username</label>
+                                            <input type="text"
+                                                class="form-control @error('username') is-invalid @enderror"
+                                                name="username" value="{{$row->username}}" required>
+                                            @error('username')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Username</label>
-                                    <input type="text" class="form-control @error('username') is-invalid @enderror"
-                                        name="username" value="{{$row->username}}" required>
-                                    @error('username')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="email"
+                                                class="form-control @error('email') is-invalid @enderror"
+                                                value="{{$row->email}}" name="email" required>
+                                            @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">No. Telp</label>
+                                            <input type="text" class="form-control @error('telp') is-invalid @enderror"
+                                                value="{{$row->telp}}" name="telp" required>
+                                            @error('telp')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                        value="{{$row->email}}" name="email" required>
-                                    @error('email')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Gambar</label><br>
+                                            @if($row->gambar!='')
+                                            <img src="{{asset('img/pengguna/'.$row->gambar)}}" alt=""
+                                                class="img-thumbnail" width="190px;"><br><br>
+                                            @endif
+                                            <input type="file" class="form-control" name="gambar" accept="image/*">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">No. Telp</label>
-                                    <input type="text" class="form-control @error('telp') is-invalid @enderror"
-                                        value="{{$row->telp}}" name="telp" required>
-                                    @error('telp')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Gambar</label><br>
-                                    @if($row->gambar!='')
-                                    <img src="{{asset('img/pengguna/'.$row->gambar)}}" alt="" class="img-thumbnail" width="190px;"><br><br>
-                                    @endif
-                                    <input type="file" class="form-control" name="gambar" accept="image/*">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Konfirmasi Password</label>
-                                    <input type="password" class="form-control" id="kpassword">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Konfirmasi Password</label>
+                                            <input type="password" class="form-control" id="kpassword">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="card-footer">
                                 <button type="reset" onclick="history.go(-1)" class="btn btn-danger">Kembali</button>
                                 <button type="submit" class="btn btn-dark float-right">Simpan</button>

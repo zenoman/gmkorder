@@ -27,43 +27,72 @@
                             action="{{url('backend/pengguna')}}">
                             @csrf
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama</label>
-                                    <input type="text" class="form-control" name="nama"  value="{{ old('nama') }}" required autofocus>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Nama</label>
+                                            <input type="text" class="form-control" name="nama"
+                                                value="{{ old('nama') }}" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Username</label>
+                                            <input type="text"
+                                                class="form-control @error('username') is-invalid @enderror"
+                                                name="username" value="{{ old('username') }}" required>
+                                            @error('username')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Username</label>
-                                    <input type="text" class="form-control @error('username') is-invalid @enderror"
-                                        name="username"  value="{{ old('username') }}" required>
-                                    @error('username')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="email"
+                                                class="form-control @error('email') is-invalid @enderror"
+                                                value="{{ old('email') }}" name="email" required>
+                                            @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">No. Telp</label>
+                                            <input type="text" class="form-control @error('telp') is-invalid @enderror"
+                                                value="{{ old('telp') }}" name="telp" required>
+                                            @error('telp')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  value="{{ old('email') }}" name="email" required>
-                                    @error('email')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Gambar</label>
+                                            <input type="file" class="form-control" name="gambar" accept="image/*"
+                                                required>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">No. Telp</label>
-                                    <input type="text" class="form-control @error('telp') is-invalid @enderror"  value="{{ old('telp') }}" name="telp" required>
-                                    @error('telp')
-                                    <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Gambar</label>
-                                    <input type="file" class="form-control" name="gambar" accept="image/*" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Konfirmasi Password</label>
-                                    <input type="password" class="form-control" id="kpassword" required>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Konfirmasi Password</label>
+                                            <input type="password" class="form-control" id="kpassword" required>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
