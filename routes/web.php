@@ -46,6 +46,11 @@ Route::prefix('backend')->group(function(){
     Route::post('/produk/add-gambar-produk','backend\ProdukController@addgambar');
     Route::delete('/produk/hapus-gambar/{id}','backend\ProdukController@hapusgambar');
 
+    //Varian produk
+    Route::post('/produk/add-varian-produk','backend\ProdukController@addvarian');
+    Route::put('/produk/edit-varian-produk/{id}','backend\ProdukController@editvarian');
+    Route::delete('/produk/hapus-varian/{id}','backend\ProdukController@hapusvarian');
+
     //penyesuaian stok 
     Route::get('/data-log-stok','backend\PenyesuaianStokController@listdata');
     Route::get('/penyesuaian-stok/import-export','backend\PenyesuaianStokController@importexport');
@@ -54,8 +59,19 @@ Route::prefix('backend')->group(function(){
     Route::get('/penyesuaian-stok/cari-detail-barang/{id}','backend\PenyesuaianStokController@detailbarang');
     Route::resource('/penyesuaian-stok','backend\PenyesuaianStokController');
 
-
+    //slider
     Route::resource('/slider','backend\SliderController');
+
+    //Warna
+    Route::resource('/warna','backend\WarnaController');
+
+    //Warna
+    Route::resource('/size','backend\SizeController');
+
+    //setting web
     Route::resource('/setting-web','backend\SettingwebController');
     
+    //Transaksi Manual
+    Route::get('/transaksi-manual/cari-detail-barang/{id}','backend\TransaksiManualController@caridetailbarang');
+    Route::resource('/transaksi-manual','backend\TransaksiManualController');
 });

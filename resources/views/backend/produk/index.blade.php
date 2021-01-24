@@ -56,9 +56,8 @@
                                             <th>No</th>
                                             <th>Kode</th>
                                             <th>Nama</th>
+                                            <th>Stok (Pcs)</th>
                                             <th class="text-center">Status</th>
-                                            <th class="text-right">Harga Jual</th>
-                                            <th class="text-right">Stok (Pcs)</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
@@ -70,9 +69,8 @@
                                             <th>No</th>
                                             <th>Kode</th>
                                             <th>Nama</th>
+                                            <th>Stok (Pcs)</th>
                                             <th class="text-center">Status</th>
-                                            <th class="text-right">Harga Jual</th>
-                                            <th class="text-right">Stok (Pcs)</th>
                                             <th class="text-center">Aksi</th>
                                         </tr>
                                     </tfoot>

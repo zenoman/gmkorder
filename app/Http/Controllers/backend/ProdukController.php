@@ -12,6 +12,7 @@ use Session;
 use Image;
 use Hash;
 use File;
+use Auth;
 use Excel;
 use DB;
 
@@ -30,14 +31,22 @@ class ProdukController extends Controller
     
     //=================================================================
     public function listdata(){
-        return Datatables::of(DB::table('produk')->get())->make(true);
+        return Datatables::of(
+        DB::table('produk')
+        ->select(DB::raw('produk.*,(select sum(produk_varian.stok) from produk_varian where produk_varian.produk_kode = produk.kode) as totalstok'))
+        ->leftjoin('produk_varian','produk_varian.produk_kode','=','produk.kode')
+        ->groupby('produk.kode')
+        ->get())
+        ->make(true);
     }
 
     //=================================================================
     public function create()
     {
+        $warna = DB::table('warna')->orderby('id','desc')->get();
+        $size = DB::table('size')->orderby('id','desc')->get();
         $kategori=DB::table('kategori_produk')->orderby('id','desc')->get();
-        return view('backend.produk.create',compact('kategori'));
+        return view('backend.produk.create',compact('kategori','warna','size'));
     }
 
     //=================================================================
@@ -46,21 +55,20 @@ class ProdukController extends Controller
         $validated = $request->validate([
             'kode' => 'required|unique:produk',
         ]);
+
         $namafile ='';
         if($request->hasFile('gambar')) {
-            
             $image = $request->file('gambar');
             $input['imagename'] = time().'-'.$image->getClientOriginalName();
-         
             $destinationPath = public_path('img/produk/thumbnail');
             $img = Image::make($image->getRealPath());
             $img->resize(150,null, function ($constraint){$constraint->aspectRatio();})
             ->save($destinationPath.'/'.$input['imagename']);
-
             $destinationPath = public_path('img/produk');
             $image->move($destinationPath, $input['imagename']);
             $namafile=$input['imagename'];
         }
+
         $imgdata = [];
         foreach ($request->file('gambarlain') as $photos) {
             $namaexs = $photos->getClientOriginalName();
@@ -69,23 +77,36 @@ class ProdukController extends Controller
             $namagambar = time().'-'.$replace_space;
             $destination = public_path('img/gambarproduk');
             $photos->move($destination,$namagambar);
-                $imgdata[] = [
-                    'kode_produk' => $request->kode,
-                    'nama' => $namagambar
-                ];
-            }
+            $imgdata[] = [
+                'kode_produk' => $request->kode,
+                'nama' => $namagambar
+            ];
+        }
+
+        $i=0;
+        $data_varian = [];
+        foreach ($request->warna as $warna) {
+            $data_varian[] =[
+                'produk_kode'=>$request->kode,
+                'warna_id'=>$request->warna[$i],
+                'size_id'=>$request->size[$i],
+                'hpp'=>$request->hpp[$i],
+                'harga'=>$request->harga_jual[$i],
+            ];
+        $i++;
+        }
+
         DB::table('gambar_produk')->insert($imgdata);
         DB::table('produk')->insert([
             'kode'=>$request->kode,
             'nama'=>$request->nama,
-            'hpp'=>$request->hpp,
             'status'=>$request->status,
             'slug'=>str_replace(' ','-',strtolower($request->nama)),
             'kategori_produk'=>$request->kategori,
-            'harga_jual'=>$request->harga_jual,
             'gambar_utama'=>$namafile,
             'deskripsi'=>$request->deskripsi,
         ]);
+        DB::table('produk_varian')->insert($data_varian);
         
         return redirect('backend/produk')->with('status','Sukses menyimpan data');
     }
@@ -98,9 +119,18 @@ class ProdukController extends Controller
         foreach($barang as $row){
             $kodebarang = $row->kode;
         }
+        $varian = DB::table('produk_varian')
+        ->select(DB::raw('produk_varian.*,size.nama as namasize, warna.nama as namawarna'))
+        ->leftjoin('size','size.id','=','produk_varian.size_id')
+        ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
+        ->where('produk_varian.produk_kode',$kodebarang)
+        ->orderby('produk_varian.id','desc')
+        ->get();
+        $warna = DB::table('warna')->orderby('id','desc')->get();
+        $size = DB::table('size')->orderby('id','desc')->get();
         $gambarbarang = DB::table('gambar_produk')->where('kode_produk',$kodebarang)->get();
         $kategori=DB::table('kategori_produk')->orderby('id','desc')->get();
-        return view('backend.produk.edit',compact('kategori','barang','gambarbarang'));
+        return view('backend.produk.edit',compact('kategori','barang','gambarbarang','varian','warna','size'));
     }
 
     //=================================================================
@@ -137,11 +167,9 @@ class ProdukController extends Controller
             ->update([
                 'kode'=>$request->kode,
                 'nama'=>$request->nama,
-                'hpp'=>$request->hpp,
                 'status'=>$request->status,
                 'slug'=>str_replace(' ','-',strtolower($request->nama)),
                 'kategori_produk'=>$request->kategori,
-                'harga_jual'=>$request->harga_jual,
                 'deskripsi'=>$request->deskripsi,
                 'gambar_utama'=>$namafile,
             ]);
@@ -151,11 +179,9 @@ class ProdukController extends Controller
             ->update([
                 'kode'=>$request->kode,
                 'nama'=>$request->nama,
-                'hpp'=>$request->hpp,
                 'status'=>$request->status,
                 'slug'=>str_replace(' ','-',strtolower($request->nama)),
                 'kategori_produk'=>$request->kategori,
-                'harga_jual'=>$request->harga_jual,
                 'deskripsi'=>$request->deskripsi,
             ]);
         }
@@ -246,4 +272,65 @@ class ProdukController extends Controller
              return back();
         }
     }
+
+    //=================================================================
+    public function addvarian(Request $request)
+    {
+        DB::table('produk_varian')
+        ->insert([
+            'produk_kode'=>$request->kode,
+            'warna_id'=>$request->warna,
+            'size_id'=>$request->size,
+            'hpp'=>$request->hpp,
+            'harga'=>$request->harga_jual,
+        ]);
+        return back()->with('statusvarian','Varian berhasil disimpan');
+    }
+
+    //=================================================================
+    public function hapusvarian(Request $request, $id)
+    {
+    $datavar = DB::table('produk_varian')
+    ->select(DB::raw('produk_varian.*, produk.nama as namaproduk, size.nama as namasize, warna.nama as namawarna'))
+    ->leftjoin('produk','produk.kode','=','produk_varian.produk_kode')
+    ->leftjoin('size','size.id','=','produk_varian.size_id')
+    ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
+    ->where('produk_varian.id',$id)
+    ->orderby('produk_varian.id','desc')
+    ->first();
+
+    $stoktotal = DB::table('produk_varian')
+    ->where('produk_kode','=',$datavar->produk_kode)
+    ->sum('stok');
+
+    DB::table('stok_log')
+    ->insert([
+        'kode_produk'=>$datavar->produk_kode,
+        'user_id'=>Auth::user()->id,
+        'status'=>'Penyesuaian Stok',
+        'aksi'=>'Mengurangi',
+        'deskripsi'=>'Menghapus varian produk '.$datavar->produk_kode.' - '.$datavar->namaproduk.' warna '.$datavar->namawarna.' size '.$datavar->namasize,
+        'jumlah'=>$datavar->stok,
+        'jumlah_akhir'=>$stoktotal-$datavar->stok,
+        'tanggal'=>date('Y-m-d H:i:s')
+    ]);
+    DB::table('produk_varian')->where('id',$id)->delete();
+    
+    return back()->with('statusvarian','Varian berhasil dihapus');
+    }
+
+    //=================================================================
+    public function editvarian(Request $request,$id)
+    {
+        DB::table('produk_varian')
+        ->where('id',$id)
+        ->update([
+            'warna_id'=>$request->warna,
+            'size_id'=>$request->size,
+            'hpp'=>$request->hpp,
+            'harga'=>$request->harga_jual,
+        ]);
+        return back()->with('statusvarian','Varian berhasil diupdate');
+    }
+    
 }

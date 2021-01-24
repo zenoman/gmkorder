@@ -13,14 +13,8 @@ $(function () {
             },
             { data: 'kode', name: 'kode' },
             { data: 'nama', name: 'nama' },
-            { data: 'status', name: 'status' ,
-            "className": 'text-center',},
-            { render: function (data, type, row) {
-                return "Rp. " + rupiah(row['harga_jual']);
-            },
-            "className": 'text-right', },
-            { data: 'stok', name: 'stok' ,
-            "className": 'text-right',},
+            { data: 'totalstok', name: 'totalstok' },
+            { data: 'status', name: 'status' ,"className": 'text-center',},
             {
                 render: function (data, type, row) {
                     return '<a href="/backend/produk/' + row['id'] + '/edit" class="btn btn-success"><i class="fa fa-wrench"></i></a> <button class="btn btn-danger" onclick="hapusdata(' + row['id'] + ')"><i class="fa fa-trash"></i></button>'

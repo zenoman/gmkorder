@@ -67,27 +67,58 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">HPP</label>
-                                            <input type="number" class="form-control" value="{{old('hpp')}}" name="hpp"
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Harga Jual</label>
-                                            <input type="number" class="form-control" value="{{old('harga_jual')}}"
-                                                name="harga_jual" required>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Deskripsi</label>
                                     <textarea name="deskripsi" class="form-control"
-                                        rows="8">{{old('deskripsi')}}</textarea>
+                                        rows="5">{{old('deskripsi')}}</textarea>
                                 </div>
+                                <hr>
+                                <div id="varianlist">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Warna / Motif</label>
+                                                <select name="warna[]" class="form-control">
+                                                    @foreach($warna as $wrn)
+                                                    <option value="{{$wrn->id}}">{{$wrn->nama}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Size</label>
+                                                <select name="size[]" class="form-control">
+                                                    @foreach($size as $sz)
+                                                    <option value="{{$sz->id}}">{{$sz->nama}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">HPP</label>
+                                                <input type="number" class="form-control" value="0" name="hpp[]"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Harga Jual</label>
+                                                <input type="number" class="form-control" value="0" name="harga_jual[]"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <button type="button" onclick="new_link()"
+                                            class="btn btn-dark btn-sm float-right">Tambah
+                                            Varian</button>
+                                    </div>
+                                </div>
+                                <hr>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -117,9 +148,72 @@
         </div>
     </div>
 </div>
+<div id="newvarianlist" style="display:none">
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Warna / Motif</label>
+                <select name="warna[]" class="form-control">
+                    @foreach($warna as $wrn)
+                    <option value="{{$wrn->id}}">{{$wrn->nama}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Size</label>
+                <select name="size[]" class="form-control">
+                    @foreach($size as $sz)
+                    <option value="{{$sz->id}}">{{$sz->nama}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleInputEmail1">HPP</label>
+                <input type="number" class="form-control" value="0" name="hpp[]" required>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Harga Jual</label>
+                <input type="number" class="form-control" value="0" name="harga_jual[]" required>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 @push('customscripts')
 <script>
+var ct = 1;
+var cx = 1;
+
+function new_link() {
+    ct++;
+    cx++;
+    if (cx > 10) {
+        alert('Maaf, Max 10 varian');
+    } else {
+        var div1 = document.createElement('div');
+        div1.id = ct;
+        var delLink = '<a href="javascript:delIt(' + ct +
+            ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus Variasi</a><br>';
+        div1.innerHTML = document.getElementById('newvarianlist').innerHTML + delLink;
+        document.getElementById('varianlist').appendChild(div1);
+    }
+}
+
+function delIt(eleId) {
+    cx -= 1;
+    d = document;
+    var ele = d.getElementById(eleId);
+    var parentEle = d.getElementById('varianlist');
+    parentEle.removeChild(ele);
+}
+
 $("#gambarlain").on("change", function() {
     if ($("#gambarlain")[0].files.length > 9) {
         alert("You can select only 9 images");

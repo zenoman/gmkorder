@@ -25,6 +25,7 @@ class ProdukImport implements ToModel, WithHeadingRow,WithValidation
             'hpp'=>$row['hpp'],
             'harga_jual'=>$row['harga_jual'],
             'kategori_produk'=>$row['kategori_id'],
+            'slug'=>str_replace(' ','-',strtolower($row['nama'])),
             'deskripsi'=>$row['deskripsi'],
             'status'=>$row['status'],
         ]);
