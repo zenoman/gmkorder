@@ -22,8 +22,6 @@ class ProdukImport implements ToModel, WithHeadingRow,WithValidation
         return new ProdukModel([
             'kode' => $row['kode'],
             'nama'=>$row['nama'],
-            'hpp'=>$row['hpp'],
-            'harga_jual'=>$row['harga_jual'],
             'kategori_produk'=>$row['kategori_id'],
             'slug'=>str_replace(' ','-',strtolower($row['nama'])),
             'deskripsi'=>$row['deskripsi'],
@@ -36,8 +34,6 @@ class ProdukImport implements ToModel, WithHeadingRow,WithValidation
         return [
             'kode' => 'required|string|unique:produk,kode',
             'nama' => 'required|string',
-            'hpp' => 'required|numeric',
-            'harga_jual' => 'required|numeric',
             'deskripsi' => 'required|string',
             'status' => 'required|in:Aktif,Non Aktif,Habis',
             'kategori_id' => 'required|numeric',

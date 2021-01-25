@@ -35,8 +35,11 @@ Route::prefix('backend')->group(function(){
     //import produk
     Route::get('/import-export/produk','backend\ProdukController@importexport');
     Route::post('/import-export/produk/import','backend\ProdukController@importproduk');
+    Route::post('/import-export/produk/import-varian','backend\ProdukController@importvarianproduk');
     Route::get('/import-export/produk/export','backend\ProdukController@exportproduk');
     Route::get('/import-export/produk-kategori/export','backend\ProdukController@exportprodukkategori');
+    Route::get('/import-export/produk-warna/export','backend\ProdukController@exportprodukwarna');
+    Route::get('/import-export/produk-size/export','backend\ProdukController@exportproduksize');
 
     //produk
     Route::get('/data-produk','backend\ProdukController@listdata');

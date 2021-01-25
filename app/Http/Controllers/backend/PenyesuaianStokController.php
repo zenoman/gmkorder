@@ -36,51 +36,64 @@ class PenyesuaianStokController extends Controller
     //=================================================================
     public function create()
     {
-        $barang = DB::table('produk')->orderby('id','desc')->get();
+        $barang = DB::table('produk_varian')
+        ->select(DB::raw('produk_varian.*, produk.nama as namaproduk, size.nama as namasize, warna.nama as namawarna'))
+        ->leftjoin('produk','produk.kode','=','produk_varian.produk_kode')
+        ->leftjoin('size','size.id','=','produk_varian.size_id')
+        ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
+        ->orderby('produk_varian.id','desc')
+        ->get();
         return view('backend.stok.create',compact('barang'));
     }
 
     //=================================================================
     public function detailbarang($id)
     {
-        $barang = DB::table('produk')->where('id',$id)->get();
+        $barang = DB::table('produk_varian')->where('id',$id)->get();
         return response()->json($barang);
     }
     
     //=================================================================
     public function store(Request $request)
     {
-        $dataproduk = DB::table('produk')->where('id',$request->produk)->first();
+        $dataproduk = DB::table('produk_varian')
+        ->select(DB::raw('produk_varian.*, produk.nama as namaproduk, size.nama as namasize, warna.nama as namawarna'))
+        ->leftjoin('produk','produk.kode','=','produk_varian.produk_kode')
+        ->leftjoin('size','size.id','=','produk_varian.size_id')
+        ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
+        ->where('produk_varian.id',$request->produk)
+        ->orderby('produk_varian.id','desc')
+        ->first();
         if($request->aksi=='Tambah'){
             $newstock = $dataproduk->stok + $request->jumlah;
-            DB::table('produk')->where('id',$request->produk)->update(['stok'=>$newstock]);
+            DB::table('produk_varian')->where('id',$request->produk)->update(['stok'=>$newstock]);
             DB::table('stok_log')
             ->insert([
-                'kode_produk'=>$dataproduk->kode,
+                'kode_produk'=>$dataproduk->produk_kode.' - '.$dataproduk->namaproduk.' - '.$dataproduk->namawarna.' - '.$dataproduk->namasize,
                 'user_id'=>Auth::user()->id,
                 'status'=>'Penyesuaian Stok',
                 'aksi'=>'Menambahkan',
-                'deskripsi'=>'Mengedit stok produk',
+                'deskripsi'=>'Mengedit stok produk barang '.$dataproduk->produk_kode.' - '.$dataproduk->namaproduk.' warna '.$dataproduk->namawarna.' size '.$dataproduk->namasize,
                 'jumlah'=>$request->jumlah,
                 'jumlah_akhir'=>$newstock,
                 'tanggal'=>date('Y-m-d H:i:s')
             ]);
         }else{
             $newstock = $dataproduk->stok - $request->jumlah;
-            DB::table('produk')->where('id',$request->produk)->update(['stok'=>$newstock]);
+            DB::table('produk_varian')->where('id',$request->produk)->update(['stok'=>$newstock]);
             DB::table('stok_log')
             ->insert([
-                'kode_produk'=>$dataproduk->kode,
+                'kode_produk'=>$dataproduk->produk_kode.' - '.$dataproduk->namaproduk.' - '.$dataproduk->namawarna.' - '.$dataproduk->namasize,
                 'user_id'=>Auth::user()->id,
                 'status'=>'Penyesuaian Stok',
                 'aksi'=>'Mengurangi',
-                'deskripsi'=>'Mengedit stok produk',
+                'deskripsi'=>'Mengedit stok produk barang '.$dataproduk->produk_kode.' - '.$dataproduk->namaproduk.' warna '.$dataproduk->namawarna.' size '.$dataproduk->namasize,
                 'jumlah'=>$request->jumlah,
                 'jumlah_akhir'=>$newstock,
                 'tanggal'=>date('Y-m-d H:i:s')
             ]);
         }
-        return redirect('backend/penyesuaian-stok')->with('status','Berhasil mengedit stok produk '.$dataproduk->kode);
+        return redirect('backend/penyesuaian-stok')->with('status','Berhasil mengedit stok produk '.$dataproduk->produk_kode);
     }
     //=================================================================
     public function importexport()

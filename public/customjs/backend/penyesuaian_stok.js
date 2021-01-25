@@ -12,7 +12,7 @@ $(function() {
                     results: $.map(data, function(item) {
                         $("#stok").val(item.stok);
                         $("#hpp").val(item.hpp);
-                        $("#harga_jual").val(item.harga_jual);
+                        $("#harga_jual").val(item.harga);
                         $('#aksi').focus();
                     })
                 }

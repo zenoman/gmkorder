@@ -38,19 +38,19 @@
                                             rendah, untuk meminimalisir kesalahan perubahan stok produk.
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Produk</label>
                                             <select name="produk" class="form-control select2">
                                                 <option selected disabled hidden>Pilih Produk</option>
                                                 @foreach($barang as $brg)
-                                                <option value="{{$brg->id}}">{{$brg->kode}} - {{$brg->nama}}</option>
+                                                <option value="{{$brg->id}}">{{$brg->produk_kode}} - {{$brg->namaproduk}} - {{$brg->namasize}} - {{$brg->namawarna}}</option>
                                                 @endforeach
                                             </select>
 
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Stok Sekarang</label>
                                             <input type="text" class="form-control" name="stok" id="stok" readonly>

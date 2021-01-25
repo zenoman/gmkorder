@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Imports;
-use App\models\ProdukModel;
+use App\models\ProdukVarianModel;
 use Illuminate\Support\Collection;
 
 use Illuminate\Validation\Rule;
@@ -23,15 +23,22 @@ class StokProdukImport implements ToCollection, WithHeadingRow, WithValidation
         $value=[];
         $datalog=[];
         foreach ($collection as $row){
-            $kproduk = $row['kode_produk'];
-            $barang = DB::table('produk')->where('kode',$kproduk)->first();
+            $kproduk = $row['id_varian_produk'];
+            $barang = DB::table('produk_varian')
+            ->select(DB::raw('produk_varian.*, produk.nama as namaproduk, size.nama as namasize, warna.nama as namawarna'))
+            ->leftjoin('produk','produk.kode','=','produk_varian.produk_kode')
+            ->leftjoin('size','size.id','=','produk_varian.size_id')
+            ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
+            ->where('produk_varian.id',$kproduk)
+            ->orderby('produk_varian.id','desc')
+            ->first();
             if($row['aksi']=='Tambah'){
                 $value[] = [
-                    'kode' => $row['kode_produk'],
+                    'id' => $row['id_varian_produk'],
                     'stok' => $barang->stok + $row['jumlah'],
                 ];
                 $datalog[] =[
-                    'kode_produk'=>$row['kode_produk'],
+                    'kode_produk'=>$barang->produk_kode.' - '.$barang->namaproduk.' - '.$barang->namawarna.' - '.$barang->namasize,
                     'user_id'=>Auth::user()->id,
                     'status'=>'Import Penyesuaian Stok',
                     'aksi'=>'Menambahkan',
@@ -42,11 +49,11 @@ class StokProdukImport implements ToCollection, WithHeadingRow, WithValidation
                 ];
             }else{
                 $value[] = [
-                    'kode' => $row['kode_produk'],
+                    'id' => $row['id_varian_produk'],
                     'stok' => $barang->stok - $row['jumlah'],
                 ];
                 $datalog[] =[
-                    'kode_produk'=>$row['kode_produk'],
+                    'kode_produk'=>$barang->produk_kode.' - '.$barang->namaproduk.' - '.$barang->namawarna.' - '.$barang->namasize,
                     'user_id'=>Auth::user()->id,
                     'status'=>'Import Penyesuaian Stok',
                     'aksi'=>'Mengurangi',
@@ -57,8 +64,8 @@ class StokProdukImport implements ToCollection, WithHeadingRow, WithValidation
                 ];
             }
         }
-        $userInstance = new ProdukModel;
-        $index = 'kode';
+        $userInstance = new ProdukVarianModel;
+        $index = 'id';
         Batch::update($userInstance, $value, $index);
         DB::table('stok_log')->insert($datalog);
     }
@@ -66,7 +73,7 @@ class StokProdukImport implements ToCollection, WithHeadingRow, WithValidation
     public function rules(): array
     {
         return [
-            'kode_produk' => 'required|string',
+            'id_varian_produk' => 'required|numeric',
             'jumlah' => 'required|numeric',
             'aksi' => 'required|in:Tambah,Kurangi',
             'deskripsi' => 'required|string',

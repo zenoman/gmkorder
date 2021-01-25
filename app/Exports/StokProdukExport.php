@@ -10,11 +10,13 @@ class StokProdukExport implements FromCollection, ShouldAutoSize, WithHeadings
 {
     public function collection()
     {
-        $export =DB::table('produk')
-        ->select(DB::raw('id,kode,nama,stok,hpp'))
-        ->orderby('id','desc')
+        $dataproduk = DB::table('produk_varian')
+        ->select(DB::raw('produk_varian.id,produk_varian.produk_kode, produk.nama as namaproduk, size.nama as namasize, warna.nama as namawarna, produk_varian.stok,produk_varian.hpp, produk_varian.harga'))
+        ->leftjoin('produk','produk.kode','=','produk_varian.produk_kode')
+        ->leftjoin('size','size.id','=','produk_varian.size_id')
+        ->leftjoin('warna','warna.id','=','produk_varian.warna_id')
         ->get();
-        return $export;
+        return $dataproduk;
     }
     public function headings(): array
     {
@@ -22,8 +24,11 @@ class StokProdukExport implements FromCollection, ShouldAutoSize, WithHeadings
             'id',
             'kode',
             'nama',
+            'size',
+            'warna',
             'stok',
             'hpp',
+            'harga_jual',
         ];
     }
 }

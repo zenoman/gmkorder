@@ -5,7 +5,10 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Exports\ProdukExport;
 use App\Exports\KategoriProdukExport;
+use App\Exports\WarnaExport;
+use App\Exports\SizeExport;
 use App\Imports\ProdukImport;
+use App\Imports\VarianProdukImport;
 use Illuminate\Http\Request;
 use DataTables;
 use Session;
@@ -257,6 +260,20 @@ class ProdukController extends Controller
     }
 
     //=================================================================
+    public function exportprodukwarna()
+    {
+        $namafile = "Data_warna_Produk.xls";   
+        return Excel::download(new WarnaExport(),$namafile);
+    }
+
+    //=================================================================
+    public function exportproduksize()
+    {
+        $namafile = "Data_size_Produk.xls";   
+        return Excel::download(new SizeExport(),$namafile);
+    }
+
+    //=================================================================
     public function importproduk(Request $request)
     {
         try {
@@ -264,11 +281,30 @@ class ProdukController extends Controller
                 $error = Excel::import(new ProdukImport, request()->file('file_excel'));
                 return redirect('backend/produk')->with('status','Berhasil Import Data');
              }else{
+                Session::flash('errorexcel', 'error uploading data');
                 return redirect('backend/produk');
              }
-        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+        }catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
              $failures = $e->failures();
              Session::flash('errorexcel', $failures);
+             return back();
+        }
+    }
+
+    //=================================================================
+    public function importvarianproduk(Request $request)
+    {
+        try {
+            if($request->hasFile('file_excel')){
+                $error = Excel::import(new VarianProdukImport, request()->file('file_excel'));
+                return redirect('backend/produk')->with('status','Berhasil Import Data');
+             }else{
+                Session::flash('errorvarianexcel', 'error uploading data');
+                return redirect('backend/produk');
+             }
+        }catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+             $failures = $e->failures();
+             Session::flash('errorvarianexcel', $failures);
              return back();
         }
     }
